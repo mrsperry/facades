@@ -71,12 +71,3 @@ nav ul li.nav-active:hover a {
     /* Active nav items shouldn't have a pointer cursor */
     cursor: default;
 }
-
-/* Global styles */
-.flex {
-    display: flex;
-}
-
-.flex-justify-center {
-    justify-content: center;
-}

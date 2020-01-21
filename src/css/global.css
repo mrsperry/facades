@@ -1,0 +1,12 @@
+/* Global styles */
+body {
+    margin: 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
