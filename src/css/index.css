@@ -1,0 +1,82 @@
+/* Containers */
+body {
+    margin: 0px;
+    background-color: #111111;
+    color: #CCCCCC;
+}
+
+#container {
+    width: 100%;
+}
+
+#content {
+    /* Set the top margin to a large value so the top-most content isn't covered by the navbar */
+    margin-top: 75px;
+}
+
+#content, nav ul {
+    width: 1000px;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    font-size: 16pt;
+    z-index: 1;
+    background-color: #111111;
+    box-shadow: 0px 3px 10px #000000;
+    top: 0px;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+nav ul {
+    /* Set the nav items to the right side of the screen */
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li {
+    border-right: 1px solid #333333;
+    padding: 0px 15px;
+}
+
+nav ul li a {
+    color: #AAAAAA;
+}
+
+nav ul li:last-child {
+    /* Remove redundant values */
+    border-right: none;
+    padding-right: 0px;
+}
+
+nav ul li.nav-active a {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EEEEEE;
+}
+
+nav ul li.nav-active, nav ul li:hover, nav ul li:hover a {
+    color: #EEEEEE;
+}
+
+nav ul li:hover a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav ul li.nav-active:hover a {
+    /* Active nav items shouldn't have a pointer cursor */
+    cursor: default;
+}
+
+/* Global styles */
+.flex {
+    display: flex;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
