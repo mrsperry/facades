@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../src/css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body class="flex flex-column flex-align-center">
+        <!-- Navbar -->
+        <nav id="navbar-bar" class="flex flex-justify-center">
+            <div id="navbar" class="flex flex-align-center">
+                <div id="navbar-logo">./sudo news</div>
+                <div id="navbar-nav" class="flex">
+                    <div class="navbar-active">/home</div>
+                    <div>/security</div>
+                    <div>/privacy</div>
+                    <div>/programming</div>
+                </div>
+            </div>
+        </nav>
+        <div id="content-container">
+            <!-- Banner -->
+            <div id="banner-container">
+                <img id="banner-image" alt="Banner image" src="images/banner.jpg">
+                <div id="banner-about-container" class="flex flex-align-center flex-column">
+                    <h1 id="banner-about-header">./sudo news</h1>
+                    <p id="banner-about-description">Your one stop shop for all tech related news</p>
+                </div>
+            </div>
+            <div id="content">
+                <!-- Featured News -->
+                <div id="featured-container" class="flex">
+                    <div id="featured-text">
+                        <div id="featured">Featured</div>
+                        <h1 id="featured-header">Heartbleed Strikes Back</h1>
+                        <p class="featured-description">CVE-2014-0160 also known as Heartbleed is an exploit for OpenSSL affecting versions 1.0.1 through 1.0.1f. It allowed malicious actors to obtain sensitive information with zero credentials and leave behind no indication of attack.</p>
+                        <p class="featured-description">A new vulnerability report that surfaced January 14th from an engineering company indicates that their servers were again attacked by Heartbleed while running an OpenSSL version deemed safe. Emails, passwords, and sensitive business documents were reported to be stolen in the attack.</p>
+                        <p class="featured-description">The OpenSSL team was notified January 16th when the company realized they had been attacked. The news of the attack was leaked on January 19th and the OpenSSL team declined to comment on whether the concerned and hack were legitimate.</p>
+                        <p id="featured-continue">Continue reading...</p>
+                        <div id="featured-date">Jan 20th, 2020</div>
+                    </div>
+                    <img id="featured-image" alt="Featured content image" src="images/articles/featured.png">
+                </div>
+                <!-- Articles -->
+                <div id="article-container" class="flex">
+                    <div class="card">
+                        <img class="card-background" alt="Phone screen" src="images/articles/article-1.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/privacy</h4>
+                            <h1 class="card-header">TikTok: How Much Does China Know?</h1>
+                            <p class="card-description">Dataminers reveal the depth of Chinese privacy intrusions.</p>
+                            <p class="card-date">Jan 18th, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Google icon" src="images/articles/article-2.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/security</h4>
+                            <h1 class="card-header">Chrome and Magellan 2.0</h1>
+                            <p class="card-description">Five new vulnerabilities uncovered stemming from SQLite.</p>
+                            <p class="card-date">Jan 17th, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Javascript code" src="images/articles/article-3.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/programming</h4>
+                            <h1 class="card-header">OpenJS and ElectronJS Merger</h1>
+                            <p class="card-description">OpenJS accepts ElectronJS into its incubation program.</p>
+                            <p class="card-date">Jan 15th, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Terminal screen" src="images/articles/article-4.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/security</h4>
+                            <h1 class="card-header">Exploit Used To Break SHA-1</h1>
+                            <p class="card-description">A new vulnerability allows every day hackers to attack OpenSSL.</p>
+                            <p class="card-date">Jan 12th, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Man using computer" src="images/articles/article-5.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/programming</h4>
+                            <h1 class="card-header">WebAssembly and .NET using Wasmtime</h1>
+                            <p class="card-description">A modern take on streamlining your web applications.</p>
+                            <p class="card-date">Jan 10th, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Laptop on desk" src="images/articles/article-6.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/security</h4>
+                            <h1 class="card-header">Critical Bug In WordPress Plugins</h1>
+                            <p class="card-description">A new bug in Elementor and Beaver Builder is being investigated.</p>
+                            <p class="card-date">Jan 7th, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Facebook icon" src="images/articles/article-7.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/privacy</h4>
+                            <h1 class="card-header">Facebook Denies Backdoor Access</h1>
+                            <p class="card-description">Facebook has rejected requests from the US and UK for a backdoor.</p>
+                            <p class="card-date">Jan 2nd, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="EU flag" src="images/articles/article-8.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/privacy</h4>
+                            <h1 class="card-header">The Right To Be Forgotten</h1>
+                            <p class="card-description">Google approached courts over enforcing laws outside of the EU.</p>
+                            <p class="card-date">Dec 28th, 2019</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-background" alt="Code" src="images/articles/article-9.jpg">
+                        <div class="card-text">
+                            <h4 class="card-category">/programming</h4>
+                            <h1 class="card-header">Microsoft Releases Typescript 3.7</h1>
+                            <p class="card-description">Awaited features such as optional chaining are now available.</p>
+                            <p class="card-date">Dec 22nd, 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
