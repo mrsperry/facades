@@ -6,16 +6,41 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="flex flex-justify-center">
-            <ul class="flex">
-                <li><a>Home</a></li>
-                <li><a>Games</a></li>
-                <li class="nav-active"><a>Websites</a></li>
-                <li><a href="../visuals/">Visuals</a></li>
-            </ul>
+        <nav id="nav" class="flex flex-justify-center">
+            <div id="nav-navbar" class="flex flex-align-center">
+                <a class="nav-item" href="../">Home</a>
+                <a class="nav-item nav-active">Websites</a>
+                <a class="nav-item" href="../visuals">Visuals</a>
+            </div>
         </nav>
-        <div id="container" class="flex flex-justify-center">
-            <div id="content"></div>
+        <!-- Description -->
+        <div id="description-container" class="flex flex-justify-center">
+            <div id="content" class="flex flex-column">
+                <div class="description flex flex-align-center">
+                    <a href="projects/fanlite-engineering/">
+                        <img alt="Fanlite Engineering" src="src/images/fanlite-engineering.png">
+                    </a>
+                    <div class="description-content">
+                        <h2 class="description-content-header"><a href="projects/fanlite-engineering/">Fanlite Engineering</a></h2>
+                        <div class="description-content-text">
+                            <p>With a focus on clean and spacious placement of information this page is intended to allow consumption of information at a medium pace.</p>
+                            <p>Its intended use case is for higher-end professional businesses that aspire for minimal or spacious aesthetics while still relaying a moderate amount of information.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="description flex flex-align-center">
+                    <a href="projects/sudo-news/">
+                        <img alt="./sudo news" src="src/images/sudo-news.png">
+                    </a>
+                    <div class="description-content">
+                        <h2 class="description-content-header"><a href="projects/sudo-news/">sudo news</a></h2>
+                        <div class="description-content-text">
+                            <p>Intended as a technical news site I wanted to be sure you could quickly access article information. Due to the article related layout, this page can quickly be transformed into a personal blog.</p>
+                            <p>The number of articles available as well as the featured content can be easily adjusted via Javascript to allow for a dynamic page.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
