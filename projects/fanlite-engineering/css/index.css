@@ -106,7 +106,7 @@
 #banner-view-projects {
     color: #FFFFFF;
     background-color: hsl(221, 67%, 54%);
-    width: fit-content;
+    width: max-content;
     padding: 15px;
     border: none;
     border-radius: 15px;
@@ -170,6 +170,7 @@
     height: 250px;
     border-radius: 50%;
     box-shadow: 1px 1px 5px #000000;
+    flex-shrink: 0;
 }
 
 .description:nth-child(2) {
