@@ -60,6 +60,10 @@ nav {
     font-size: 1.2em;
 }
 
+#navbar-nav > a:hover {
+    margin-bottom: -2px;
+}
+
 #navbar-nav > button {
     margin-right: 0em;
 }
