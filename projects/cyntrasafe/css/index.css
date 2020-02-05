@@ -20,19 +20,17 @@
 }
 
 /* Backgrounds */
-.main-background {
+#header-background {
     color: #FFFFFF;
     /* Credit to https://leaverou.github.io/css3patterns/ */
-    background:
-        linear-gradient(27deg, hsl(215, 40%, 5%) 5px, transparent 5px) 0 5px,
-        linear-gradient(207deg, hsl(215, 40%, 5%) 5px, transparent 5px) 10px 0px,
-        linear-gradient(27deg, hsl(215, 40%, 15%) 5px, transparent 5px) 0px 10px,
-        linear-gradient(207deg, hsl(215, 40%, 15%) 5px, transparent 5px) 10px 5px,
-        linear-gradient(90deg, hsl(215, 40%, 10%) 10px, transparent 10px),
-        linear-gradient(hsl(215, 40%, 10%) 25%, hsl(215, 40%, 10%) 20%, hsl(215, 40%, 10%) 50%,
-            transparent 50%, transparent 75%, hsl(215, 40%, 5%) 75%, hsl(215, 40%, 5%));
-    background-color: hsl(215, 40%, 5%);
-    background-size: 1.25rem 1.25rem;
+    background-color: hsl(215, 70%, 10%);
+    background-image: 
+        linear-gradient(rgba(150, 150, 150, 0.2) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(150, 150, 150, 0.2) 2px, transparent 2px),
+        linear-gradient(rgba(150, 150, 150, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(150, 150, 150, 0.1) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 #integrations-background {
@@ -40,7 +38,7 @@
     color: #FFFFFF;
 }
 
-#account-creation-background {
+#account-creation-background, footer {
     background-color: hsl(215, 70%, 10%);
     color: #FFFFFF;
 }
