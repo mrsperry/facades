@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .flex {
     display: flex;
 }
@@ -24,5 +28,10 @@ body {
 }
 
 .flex-align-center {
+    align-items: center;
+}
+
+.flex-centered {
+    justify-content: center;
     align-items: center;
 }
