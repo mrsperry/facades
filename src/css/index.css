@@ -59,7 +59,7 @@
     height: 15.5em;
 }
 
-.description:nth-child(2) {
+.description:nth-child(even) {
     align-self: flex-end;
     flex-direction: row-reverse;
 }
