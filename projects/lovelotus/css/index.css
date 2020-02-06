@@ -36,7 +36,7 @@ body {
 }
 
 #sidebar-logo {
-    transform: rotate(45deg);
+    filter: invert(30%) sepia(26%) saturate(860%) hue-rotate(198deg) brightness(95%) contrast(88%);
     font-size: 3em;
     margin-right: 0.2em;
 }
