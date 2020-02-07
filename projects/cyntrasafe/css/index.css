@@ -52,16 +52,12 @@ nav {
     font-size: 3em;
 }
 
-#navbar-nav > * {
+#navbar-nav > button, #navbar-links > a {
     margin: 0em 1.2em;
 }
 
-#navbar-nav > a {
+#navbar-links > a {
     font-size: 1.2em;
-}
-
-#navbar-nav > a:hover {
-    margin-bottom: -2px;
 }
 
 #navbar-nav > button {
@@ -151,11 +147,18 @@ a {
     cursor: pointer;
     box-sizing: border-box;
     padding: 0.2em 0em;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
 a:hover {
     border-bottom: 2px solid #FFFFFF;
-    margin-bottom: -2px;
+}
+
+a, a:hover {
+    -webkit-transition: border-bottom 200ms linear;
+    -moz-transition: border-bottom 200ms linear;
+    -o-transition: border-bottom 200ms linear;
+    transition: border-bottom 200ms linear;
 }
 
 button {
@@ -172,4 +175,11 @@ button {
 
 button:hover {
     background-color: hsl(215, 70%, 70%);
+}
+
+button, button:hover {
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
