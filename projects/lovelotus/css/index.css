@@ -204,9 +204,8 @@ body {
 }
 
 .conversation {
-    background-color: #FFFFFF;
+    position: relative;
     cursor: pointer;
-    border-radius: 0.5em;
     box-shadow: 0em 0em 1em 0em rgba(0, 0, 0, 0.2);
     font-weight: 400;
     width: 20em;
@@ -214,21 +213,39 @@ body {
     margin: 1em 0em;
 }
 
-.conversation:hover {
-    background-image: linear-gradient(#FFFFFF, rgb(248, 214, 255))
+.conversation-content {
+    z-index: 1;
 }
 
-.conversation > img {
+.conversation-content > img {
     box-shadow: 0em 0em 1em 0em rgba(0, 0, 0, 0.2);
     width: 5em;
 }
 
-.conversation > div {
+.conversation-content > div {
     padding-left: 0.5em;
 }
 
-.conversation h1 {
+.conversation-content > div > h1 {
     margin-top: 0em;
+}
+
+.conversation-hidden-background, .conversation-background {
+    border-radius: 0.5em;
+}
+
+.conversation-background, .conversation-hidden-background {
+    position: absolute;
+    background-color: #FFFFFF;;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+}
+
+.conversation-hidden-background {
+    display: none;
+    background-image: linear-gradient(#FFFFFF, rgb(248, 214, 255));
 }
 
 /* Global Styles */
