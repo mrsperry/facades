@@ -137,27 +137,46 @@ body {
 }
 
 .card button {
+    position: relative;
     color: #FFFFFF;
     font-weight: 600;
-    border-radius: 1em;
     box-shadow: 0em 0em 1em 0em rgba(0, 0, 0, 0.2);
     padding: 1em;
     border: none;
+    margin: 0em 0.2em;
 }
 
-.card-match {
+.card-match-content, .card-profile-content {
+    z-index: 1;
+}
+
+.card button, .card button > div {
+    border-radius: 1em;
+}
+
+.card-match-background, .card-match-hidden-background,.card-profile-background, .card-profile-hidden-background {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+}
+
+.card-match-background {
     background-image: linear-gradient(45deg, #FFCCD4 10%, #E765E7);
 }
 
-.card-match:hover {
+.card-match-hidden-background {
+    display: none;
     background-image: linear-gradient(45deg, #E765E7 10%, #FFCCD4);
 }
 
-.card-profile {
+.card-profile-background {
     background-image: linear-gradient(15deg, #608BDB 10%, #A2D1FC);
 }
 
-.card-profile:hover {
+.card-profile-hidden-background {
+    display: none;
     background-image: linear-gradient(15deg, #A2D1FC 10%, #608BDB);
 }
 
