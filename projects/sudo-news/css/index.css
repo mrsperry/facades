@@ -46,14 +46,18 @@ body {
     font-size: 2em;
 }
 
-#navbar-nav > div {
+#navbar-nav > a {
     font-size: 1.2em;
     cursor: pointer;
     padding: 0px 15px;
 }
 
-#navbar-nav > div:hover, .navbar-active {
+#navbar-nav > a:hover, .navbar-active {
     color: #999999;
+}
+
+#navbar-nav > .navbar-active {
+    cursor: default;
 }
 
 /* Banner */
@@ -135,7 +139,7 @@ body {
 
 .card {
     position: relative;
-    box-shadow: 2px 2px 5px #CCCCCC, -2px -2px 5px #CCCCCC;
+    box-shadow: 0px 0px 15px 5px #CCCCCC;
     width: 330px;
     height: 430px;
     border-radius: 10px;
@@ -143,7 +147,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 2px 2px 5px hsl(214, 87%, 71%), -2px -2px 5px hsl(214, 87%, 71%);
+    box-shadow: 0px 0px 15px 5px hsl(214, 87%, 71%);
     cursor: pointer;
 }
 
@@ -193,4 +197,19 @@ body {
 
 .card-date {
     color: #AAAAAA;
+}
+
+/* Global styles */
+a, a:hover {
+    -webkit-transition: color 200ms linear;
+    -moz-transition: color 200ms linear;
+    -o-transition: color 200ms linear;
+    transition: color 200ms linear;
+}
+
+.card, .card:hover {
+    -webkit-transition: box-shadow 200ms linear;
+    -moz-transition: box-shadow 200ms linear;
+    -o-transition: box-shadow 200ms linear;
+    transition: box-shadow 200ms linear;
 }
