@@ -63,6 +63,7 @@
 
 .navbar-nav-item {
     padding: 0px 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
     margin: 0px 25px;
 }
 
@@ -131,6 +132,7 @@
     width: 300px;
     height: 300px;
     padding: 15px 30px;
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
     margin: 15px;
 }
 
@@ -225,4 +227,26 @@ footer {
 
 #footer-media > li:not(:first-child):hover {
     color: hsl(192, 100%, 75%);
+}
+
+/* Global Styles */
+a, a:hover {
+    -webkit-transition: color 200ms linear;
+    -moz-transition: color 200ms linear;
+    -o-transition: color 200ms linear;
+    transition: color 200ms linear;
+}
+
+button, button:hover {
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.navbar-nav-item, .navbar-nav-item:hover, .card, .card:hover {
+    -webkit-transition: border-bottom 200ms linear;
+    -moz-transition: border-bottom 200ms linear;
+    -o-transition: border-bottom 200ms linear;
+    transition: border-bottom 200ms linear;
 }
