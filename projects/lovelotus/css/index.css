@@ -154,7 +154,7 @@ body {
     border-radius: 1em;
 }
 
-.card-match-background, .card-match-hidden-background,.card-profile-background, .card-profile-hidden-background {
+.card-match-background, .card-match-hidden-background, .card-profile-background, .card-profile-hidden-background {
     position: absolute;
     top: 0em;
     right: 0em;

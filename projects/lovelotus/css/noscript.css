@@ -1,0 +1,13 @@
+/* Matches */
+.card-match:hover .card-match-background {
+    background-image: linear-gradient(45deg, #E765E7 10%, #FFCCD4);
+}
+
+.card-profile:hover .card-profile-background {
+    background-image: linear-gradient(15deg, #A2D1FC 10%, #608BDB);
+}
+
+/* Conversations */
+.conversation:hover .conversation-background {
+    background-image: linear-gradient(#FFFFFF, rgb(248, 214, 255));
+}
