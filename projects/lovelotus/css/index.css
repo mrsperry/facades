@@ -261,6 +261,13 @@ a:hover, .sidebar-active {
     color: hsl(235, 50%, 60%);
 }
 
+a, a:hover {
+    -webkit-transition: color 100ms linear;
+    -moz-transition: color 100ms linear;
+    -o-transition: color 100ms linear;
+    transition: color 100ms linear;
+}
+
 img {
     border-radius: 50%;
 }
