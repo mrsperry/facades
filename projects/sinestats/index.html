@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SineStats - Joshua Sperry</title>
+        <link rel="icon" href="images/icon.png">
+        <!-- jQuery -->
+        <script src="../../libraries/jquery-3.4.1.min.js"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="../../libraries/fontawesome-free-5.12.0-web/css/all.min.css">
+        <!-- Chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../../src/css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body class="flex flex-centered">
+        <div id="content" class="flex flex-column">
+            <nav id="nav" class="content-section flex flex-justify-between">
+                <ul class="flex flex-align-center">
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-server"></i>
+                            <span class="tooltip-text">Servers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-exclamation"></i>
+                            <span class="tooltip-text">Alerts</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-envelope"></i>
+                            <span class="tooltip-text">Mail</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-chart-line"></i>
+                            <span class="tooltip-text">Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-address-book"></i>
+                            <span class="tooltip-text">Administrators</span>
+                        </a>
+                    </li>
+                    <li id="nav-divider"></li>
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-shopping-cart"></i>
+                            <span class="tooltip-text">Shop</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="nav-offers" class="tooltip">
+                            <i class="tooltip fas fa-star"></i>
+                            <span class="tooltip-text">Offers</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="flex flex-align-center">
+                    <li>
+                        <a class="tooltip">
+                            <i class="tooltip fas fa-bell"></i>
+                            <span class="tooltip-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="profile-image" class="tooltip">
+                            <img alt="Profile" src="images/profile.png">
+                            <span class="tooltip-text">Account</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex">
+                <div id="server-status" class="content-section centered">
+                    <h1>Server Status: <span id="server-current-status" class="good-alert">Running</span></h1>
+                    <p>You have <span class="good-alert">0</span class="good-alert"> outstanding alerts.</p>
+                    <p>Server uptime in the past week is at <span class="good-alert">97.8%</span>.</p>
+                </div>
+                <div class="content-section graph-holder">
+                    <h4 class="centered">CPU Usage (%)</h4>
+                    <canvas id="cpu-usage">
+                        <p>The CPU graph failed to load.</p>
+                    </canvas>
+                </div>
+                <div class="content-section graph-holder">
+                    <h4 class="centered">RAM Usage (GB)</h4>
+                    <canvas id="ram-usage">
+                        <p>The RAM graph failed to load.</p>
+                    </canvas>
+                </div>
+            </div>
+            <div class="flex">
+                <div id="hdd-info" class="content-section flex">
+                    <div>
+                        <h4 id="hdd-header" class="centered">HDD Usage</h4>
+                        <canvas id="hdd-usage">
+                            <p>The HDD graph failed to load.</p>
+                        </canvas>
+                    </div>
+                    <div class="flex flex-column flex-justify-center">
+                        <div class="bar-graph-holder">
+                            <div class="bar-graph-label flex flex-justify-between">
+                                <span>Disk 1</span>
+                                <span>98%</span>
+                            </div>
+                            <div id="bar-graph-1" class="bar-graph"></div>
+                        </div>
+                        <div class="bar-graph-holder">
+                            <div class="bar-graph-label flex flex-justify-between">
+                                <span>Disk 2</span>
+                                <span>52%</span>
+                            </div>
+                            <div id="bar-graph-2" class="bar-graph"></div>
+                        </div>
+                        <div class="bar-graph-holder">
+                            <div class="bar-graph-label flex flex-justify-between">
+                                <span>Disk 3</span>
+                                <span>30%</span>
+                            </div>
+                            <div id="bar-graph-3" class="bar-graph"></div>
+                        </div>
+                        <div class="bar-graph-holder">
+                            <div class="bar-graph-label flex flex-justify-between">
+                                <span>Disk 4</span>
+                                <span>48%</span>
+                            </div>
+                            <div id="bar-graph-4" class="bar-graph"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="server-info" class="content-section flex flex-column">
+                    <div class="flex flex-justify-between">
+                        <div id="server-info-list">
+                            <h1>Server Information</h1>
+                            <div>OS: <span class="good-alert">Ubuntu/18.04.3</span></div>
+                            <div>Public IP: <span class="good-alert">284.188.104.91</span></div>
+                            <div>Port Range: <span class="good-alert">1080-2050</span></div>
+                            <div>Last Modified: <span class="good-alert">Tue Jan 14th, 2020 19:41:27</span></div>
+                            <div>Serial: <span class="good-alert">25-8F-B4-6F-66-0B-81</span></div>
+                        </div>
+                        <div id="server-requests" class="flex flex-column">
+                            <h1>Requests</h1>
+                            <ul class="flex">
+                                <li>
+                                    <div>API /s</div>
+                                    <div class="good-alert">71</div class="good-alert">
+                                </li>
+                                <li>
+                                    <div>Database /s</div>
+                                    <div class="good-alert">64</div>
+                                </li>
+                            </ul>
+                            <ul class="flex">
+                                <li>
+                                    <div>RSA /s</div>
+                                    <div class="good-alert">19</div>
+                                </li>
+                                <li>
+                                    <div>RPC /s</div>
+                                    <div class="good-alert">4</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ssl-connections">
+                        <h1>SSL Connections</h1>
+                        <ul id="connections-list" class="flex flex-justify-between">
+                            <li>
+                                <div>Connected</div>
+                                <div class="good-alert">54</div class="good-alert">
+                            </li>
+                            <li>
+                                <div>Accepted /s</div>
+                                <div class="good-alert">8</div>
+                            </li>
+                            <li>
+                                <div>Active</div>
+                                <div class="good-alert">21</div class="good-alert">
+                            </li>
+                            <li>
+                                <div>Idle</div>
+                                <div class="good-alert">12</div class="good-alert">
+                            </li>
+                            <li>
+                                <div>Dropped</div>
+                                <div class="good-alert">0</div class="good-alert">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="content-section flex flex-justify-between">
+                <ul class="flex">
+                    <li><i class="far fa-copyright"></i> 2020 SineStats, Inc</li >
+                    <li><a>Contact</a></li>
+                    <li><a>Support</a></li>
+                    <li><a>Privacy</a></li>
+                    <li><a>Security</a></li>
+                    <li><a>Status</a></li>
+                </ul>
+                <ul class="flex">
+                    <li><a>Pricing</a></li>
+                    <li><a>Offers</a></li>
+                    <li><a>API</a></li>
+                    <li><a>Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
