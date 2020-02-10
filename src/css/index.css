@@ -57,6 +57,7 @@ body {
 
 .description {
     width: 100%;
+    opacity: 0;
 }
 
 .description img, .description img:hover {

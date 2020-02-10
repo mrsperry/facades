@@ -1,6 +1,6 @@
 (async () => {
     // Hide all description elements
-    const elements = $(".description").css("opacity", 0);
+    const elements = $(".description");
     // Get the amount of margin to add to each element
     const width = ($(document).width() / 2) + "px";
 
@@ -8,7 +8,6 @@
         $(elements[index])
             // Swap sides after each element
             .css("margin-left", (index % 2 == 0 ? "-" : "") + width)
-            .css("opacity", 0)
             // Animate the element, sliding in from either side
             .animate({
                 "margin-left": "0px",
