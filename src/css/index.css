@@ -17,6 +17,29 @@ body {
     width: 63em;
 }
 
+/* Animations */
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Navbar */
 #nav {
     background-color: #FFFFFF;
@@ -56,8 +79,13 @@ body {
 }
 
 .description {
-    width: 100%;
-    opacity: 0;
+    animation: 1.75s ease-out 0s 1 slide-left;
+}
+
+.description:nth-child(even) {
+    animation: 1.75s ease-out 0s 1 slide-right;
+    align-self: flex-end;
+    flex-direction: row-reverse;
 }
 
 .description img, .description img:hover {
@@ -93,11 +121,6 @@ body {
 
 .description a:hover {
     color: hsl(200, 100%, 65%);
-}
-
-.description:nth-child(even) {
-    align-self: flex-end;
-    flex-direction: row-reverse;
 }
 
 .description-content {
