@@ -9,6 +9,10 @@
     color: #000000;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #content, #nav-navbar {
     width: 63em;
 }
@@ -49,6 +53,10 @@
 /* Descriptions */
 #description-container {
     margin: 3em 0em;
+}
+
+.description {
+    width: 100%;
 }
 
 .description > a > img {
