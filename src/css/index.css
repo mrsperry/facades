@@ -67,11 +67,11 @@ body {
 }
 
 .description {
-    animation: 1.75s ease-out slide-left, 1.75s ease-out fade-in;
+    animation: 1.25s ease-out slide-left, 1.25s ease-out fade-in;
 }
 
 .description:nth-child(even) {
-    animation: 1.75s ease-out slide-right, 1.75s ease-out fade-in;
+    animation: 1.25s ease-out slide-right, 1.25s ease-out fade-in;
     align-self: flex-end;
     flex-direction: row-reverse;
 }
