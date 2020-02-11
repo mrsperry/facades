@@ -3,6 +3,17 @@
     font-family: "Segoe UI", sans-serif;
 }
 
+/* Animations */
+@keyframes slide-top {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slide-bottom {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
 /* Containers */
 html, body {
     color: hsl(240, 15%, 85%);
@@ -19,6 +30,7 @@ html, body {
 
 /* Navbar */
 #nav {
+    animation: 1s ease-out slide-top, 1s ease-out fade-in;
     padding: 0.5em;
 }
 
@@ -230,6 +242,7 @@ html, body {
 
 /* Footer */
 #footer {
+    animation: 1s ease-out slide-bottom, 1s ease-out fade-in;
     padding: 1em;
 }
 
