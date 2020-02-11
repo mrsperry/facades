@@ -8,6 +8,25 @@
     font-size: 16px;
 }
 
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-top {
+    0% {
+        transform: translateY(25%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* Containers */
 body {
     height: 100%;
@@ -75,6 +94,7 @@ body {
 }
 
 #banner-about-container {
+    animation: 1.5s fade-in, 1.5s fade-top;
     color: #FFFFFF;
 }
 
