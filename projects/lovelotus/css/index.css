@@ -252,6 +252,17 @@ body {
     margin: 1em 0em;
 }
 
+.conversation:hover {
+    transform: scale(1.05);
+}
+
+.conversation, .conversation:hover {
+    -webkit-transition: 200ms transform ease-in-out;
+    -moz-transition: 200ms transform ease-in-out;
+    -o-transition: 200ms transform ease-in-out;
+    transition: 200ms transform ease-in-out;
+}
+
 .conversation-content {
     z-index: 1;
 }
