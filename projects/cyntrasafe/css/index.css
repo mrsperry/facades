@@ -4,6 +4,22 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Animations */
+@keyframes slide-top {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slide-left {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
 /* Containers */
 .container-max {
     display: flex;
@@ -45,6 +61,7 @@
 
 /* Navbar */
 nav {
+    animation: 0.5s ease-out slide-top, 1s ease-out fade-in;
     margin: 2em 0em;
 }
 
@@ -69,11 +86,16 @@ nav {
     margin-bottom: 2em;
 }
 
+#header-text {
+    animation: 1s ease-out slide-left, 1s ease-out fade-in;
+}
+
 #header-text > p {
     font-size: 1.5em;
 }
 
 #header-image {
+    animation: 1s ease-out slide-right, 1s ease-out fade-in;
     flex-shrink: 0;
     border-radius: 0.4em;
     width: 60%;
