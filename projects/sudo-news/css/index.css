@@ -180,9 +180,17 @@ body {
 
 .card-background {
     position: absolute;
+    -webkit-transition: 150ms transform linear;
+    -moz-transition: 150ms transform linear;
+    -o-transition: 150ms transform linear;
+    transition: 150ms transform linear;
     background-color: #FFFFFF;
     width: 100%;
     height: 100%;
+}
+
+.card:hover .card-background {
+    transform: scale(1.1);
 }
 
 .card-text {
