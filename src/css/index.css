@@ -19,25 +19,13 @@ body {
 
 /* Animations */
 @keyframes slide-left {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
 
 @keyframes slide-right {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
 }
 
 /* Navbar */
@@ -79,11 +67,11 @@ body {
 }
 
 .description {
-    animation: 1.75s ease-out 0s 1 slide-left;
+    animation: 1.75s ease-out slide-left, 1.75s ease-out fade-in;
 }
 
 .description:nth-child(even) {
-    animation: 1.75s ease-out 0s 1 slide-right;
+    animation: 1.75s ease-out slide-right, 1.75s ease-out fade-in;
     align-self: flex-end;
     flex-direction: row-reverse;
 }

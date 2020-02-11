@@ -33,47 +33,23 @@ body {
 
 /* Animations */
 @keyframes slide-top {
-    0% {
-        transform: translateY(-150%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(-150%); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes slide-bottom {
-    0% {
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(50%); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes slide-left {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
 
 @keyframes slide-right {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
 }
 
 /* Background image */
@@ -92,7 +68,7 @@ body {
 
 /* Navbar */
 #navbar {
-    animation: 1s ease-out 0s 1 slide-top;
+    animation: 1s ease-out slide-top, 1s ease-out fade-in;
     margin: 20px 0px 50px;
 }
 
@@ -131,7 +107,7 @@ body {
 
 /* Banner */
 #banner-container {
-    animation: 1.5s ease-out 0s 1 slide-bottom;
+    animation: 1.5s ease-out slide-bottom, 1.5s ease-out fade-in;
 }
 
 #banner-logo {
@@ -180,7 +156,7 @@ body {
 
 .card {
     position: relative;
-    animation: 1.5s ease-out 0s 1 slide-bottom;
+    animation: 1.5s ease-out slide-bottom, 1.5s ease-out fade-in;
     background-color: #FFFFFF;
     box-sizing: border-box;
     box-shadow: 1px 1px 3px #CCCCCC, -1px 0px 3px #CCCCCC;
@@ -227,11 +203,11 @@ body {
 }
 
 .description {
-    animation: 1.5s ease-out 0s 1 slide-left;
+    animation: 1.5s ease-out slide-left, 1.5s ease-out fade-in;
 }
 
 .description:nth-child(2) {
-    animation: 1.5s ease-out 0s 1 slide-right;
+    animation: 1.5s ease-out slide-right, 1.5s ease-out fade-in;
     align-self: flex-end;
     flex-direction: row-reverse;
 }
@@ -268,7 +244,7 @@ body {
 
 /* Footer */
 footer {
-    animation: 1s ease-out 0s 1 slide-bottom;
+    animation: 1s ease-out slide-bottom, 1s ease-out fade-in;
     background-color: var(--logo-color);
     color: #FFFFFF;
     font-size: 1em;
