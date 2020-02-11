@@ -72,7 +72,7 @@ body {
 }
 
 #navbar-nav > a:hover, .navbar-active {
-    color: #999999;
+    color: #888888;
 }
 
 #navbar-nav > .navbar-active {
@@ -142,7 +142,7 @@ body {
 }
 
 #featured-date {
-    color: #777777;
+    color: #666666;
 }
 
 #featured-image {
@@ -224,7 +224,7 @@ body {
 }
 
 .card-date {
-    color: #AAAAAA;
+    color: #BBBBBB;
 }
 
 /* Global styles */
