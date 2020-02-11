@@ -76,38 +76,53 @@ body {
     flex-direction: row-reverse;
 }
 
-.description img, .description img:hover {
+.description > a {
+    flex-shrink: 0;
+    border-radius: 50%;
+    box-shadow: 0.1em 0.1em 0.2em #000000;
+    overflow: hidden;
+}
+
+.description > a:hover {
+    box-shadow: 0.1em 0.1em 0.2em hsl(200, 100%, 40%);
+}
+
+.description > a, .description > a:hover {
     -webkit-transition: box-shadow 250ms linear;
     -moz-transition: box-shadow 250ms linear;
     -o-transition: box-shadow 250ms linear;
     transition: box-shadow 250ms linear;
 }
 
-.description img {
-    flex-shrink: 0;
-    border-radius: 50%;
-    box-shadow: 0.1em 0.1em 0.2em #000000;
+.description > a, .description > a > img {
     width: 15.5em;
     height: 15.5em;
 }
 
-.description img:hover {
-    box-shadow: 0.1em 0.1em 0.2em hsl(200, 100%, 40%);
+.description a:hover > img {
+    transform: scale(1.1);
 }
 
-.description a, .description a:hover {
+.description > a > img, .description > a:hover > img {
+    -webkit-transition: 150ms transform linear;
+    -moz-transition: 150ms transform linear;
+    -o-transition: 150ms transform linear;
+    transition: 150ms transform linear;
+}
+
+.description > div a, .description > div a:hover {
     -webkit-transition: color 250ms linear;
     -moz-transition: color 250ms linear;
     -o-transition: color 250ms linear;
     transition: color 250ms linear;
 }
 
-.description a {
+.description > div a {
     text-decoration: none;
     color: hsl(200, 100%, 40%);
 }
 
-.description a:hover {
+.description > div a:hover {
     color: hsl(200, 100%, 65%);
 }
 
