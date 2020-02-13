@@ -72,6 +72,10 @@ body {
     margin: 20px 0px 50px;
 }
 
+#navbar-brand {
+    margin-left: 25px;
+}
+
 #navbar-brand-name {
     font-weight: 800;
     font-size: 1.45em;
@@ -204,12 +208,14 @@ body {
 
 .description {
     animation: 1.5s ease-out slide-left, 1.5s ease-out fade-in;
+    margin-left: 25px;
 }
 
 .description:nth-child(2) {
     animation: 1.5s ease-out slide-right, 1.5s ease-out fade-in;
     align-self: flex-end;
     flex-direction: row-reverse;
+    margin-right: 25px;
 }
 
 .description > img {

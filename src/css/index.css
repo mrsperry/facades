@@ -68,12 +68,14 @@ body {
 
 .description {
     animation: 1.25s ease-out slide-left, 1.25s ease-out fade-in;
+    margin-left: 1.4em;
 }
 
 .description:nth-child(even) {
     animation: 1.25s ease-out slide-right, 1.25s ease-out fade-in;
     align-self: flex-end;
     flex-direction: row-reverse;
+    margin-right: 1.4em;
 }
 
 .description > a {

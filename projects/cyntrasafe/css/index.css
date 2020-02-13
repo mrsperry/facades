@@ -28,7 +28,8 @@
 }
 
 .container {
-    width: 75em;
+    min-width: 64em;
+    max-width: 75em;
 }
 
 .container-small {
@@ -62,7 +63,7 @@
 /* Navbar */
 nav {
     animation: 0.5s ease-out slide-top, 1s ease-out fade-in;
-    margin: 2em 0em;
+    margin: 2em;
 }
 
 #navbar-brand {
@@ -83,11 +84,12 @@ nav {
 
 /* Header */
 #header {
-    margin-bottom: 2em;
+    margin: 0em 2em 2em;
 }
 
 #header-text {
     animation: 1s ease-out slide-left, 1s ease-out fade-in;
+    margin-right: 2em;
 }
 
 #header-text > p {
