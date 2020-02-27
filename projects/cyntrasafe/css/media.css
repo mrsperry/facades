@@ -20,3 +20,26 @@
         display: block;
     }
 }
+
+/* 640px */
+@media only screen and (max-width: 40em) {
+    nav {
+        margin: 0.5em;
+    }
+
+    #navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #footer {
+        padding: 1em 0.5em;
+    }
+}
