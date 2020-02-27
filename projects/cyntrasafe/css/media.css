@@ -8,6 +8,10 @@
     #header > img {
         display: none;
     }
+
+    #header-text {
+        margin-right: 0em;
+    }
 }
 
 /* 896px */
