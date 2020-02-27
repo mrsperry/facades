@@ -123,7 +123,7 @@ nav {
     padding: 0.5em 0.5em;
 }
 
-#navbar-hamburger-links > div:hover {
+#navbar-hamburger-links > div:hover, #navbar-hamburger-links > div:active {
     background-color: #CCCCCC;
 }
 
