@@ -1,12 +1,5 @@
-@media only screen and (max-width: 40em) {
-    #navbar-links {
-        display: none;
-    }
-
-    #navbar-hamburger {
-        display: block;
-    }
-
+/* 1024px */
+@media only screen and (max-width: 64em) {
     #header {
         flex-direction: column;
         text-align: center;
@@ -14,5 +7,16 @@
 
     #header > img {
         display: none;
+    }
+}
+
+/* 896px */
+@media only screen and (max-width: 56em) {
+    #navbar-links {
+        display: none;
+    }
+
+    #navbar-hamburger {
+        display: block;
     }
 }
