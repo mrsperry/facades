@@ -4,26 +4,6 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Media queries */
-@media only screen and (max-width: 40em) {
-    #navbar-links {
-        display: none;
-    }
-
-    #navbar-nav > #navbar-hamburger {
-        display: block;
-    }
-
-    #header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #header > img {
-        display: none;
-    }
-}
-
 /* Animations */
 @keyframes slide-top {
     0% { transform: translateY(-100%); }
