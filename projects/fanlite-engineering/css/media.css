@@ -1,22 +1,20 @@
 /* 896px */
 @media only screen and (max-width: 56em) {
+    #content-bg-image {
+        display: none;
+    }
+
     #card-container {
         display: none;
     }
 
     #description-container {
-        margin-top: 20em;
+        margin-top: 0em;
     }
 }
 
 /* 640px */
 @media only screen and (max-width: 40em) {
-    #content-bg-image {
-        width: auto;
-        height: 33em;
-        overflow-x: hidden;
-    }
-
     #navbar {
         margin-bottom: 0.5em;
     }
@@ -43,10 +41,6 @@
 
     #banner-view-projects {
         font-size: 0.8em;
-    }
-
-    #description-container {
-        margin-top: 15em;
     }
 
     .description, .description:nth-child(even) {
