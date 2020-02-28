@@ -1,0 +1,61 @@
+/* 896px */
+@media only screen and (max-width: 56em) {
+    #card-container {
+        display: none;
+    }
+
+    #description-container {
+        margin-top: 20em;
+    }
+}
+
+/* 640px */
+@media only screen and (max-width: 40em) {
+    #content-bg-image {
+        width: auto;
+        height: 33em;
+        overflow-x: hidden;
+    }
+
+    #navbar {
+        margin-bottom: 0.5em;
+    }
+
+    .navbar-nav-item {
+        margin: 0em 0.2em;
+    }
+
+    #banner-logo {
+        font-size: 13em;
+    }
+
+    #banner-message-welcome {
+        font-size: 1.2em;
+    }
+
+    #banner-message-intro {
+        font-size: 1.5em;
+    }
+
+    #banner-message-subject {
+        font-size: 2.3em;
+    }
+
+    #banner-view-projects {
+        font-size: 0.8em;
+    }
+
+    #description-container {
+        margin-top: 15em;
+    }
+
+    .description, .description:nth-child(even) {
+        flex-direction: column;
+        margin: 1em 0em;
+    }
+
+    .description-content-header {
+        text-align: center;
+        margin-top: 1em;
+    }
+}

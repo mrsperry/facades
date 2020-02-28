@@ -63,7 +63,8 @@ body {
 
 /* Containers */
 #content-container, #footer-container {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 /* Navbar */
@@ -92,6 +93,7 @@ body {
 }
 
 .navbar-nav-item {
+    width: max-content;
     padding: 0px 5px;
     border-bottom: 2px solid rgba(0, 0, 0, 0);
     margin: 0px 25px;
