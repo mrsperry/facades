@@ -319,18 +319,24 @@ footer {
 
 #footer-container > ol {
     list-style-type: none;
+    padding: 0em;
+    margin: 1em;
+}
+
+#footer-container > ol > li {
+    width: fit-content;
 }
 
 #footer-container > ol > li:first-child {
     font-size: 1.5em;
 }
 
-#footer-media > li:not(:first-child) {
+#footer-media > li:not(:first-child), #footer-contact-number {
     cursor: pointer;
     color: hsl(192, 100%, 50%);
 }
 
-#footer-media > li:not(:first-child):hover {
+#footer-media > li:not(:first-child):hover, #footer-contact-number:hover {
     color: hsl(192, 100%, 75%);
 }
 
