@@ -19,8 +19,12 @@
         margin-bottom: 0.5em;
     }
 
-    .navbar-nav-item {
-        margin: 0em 0.2em;
+    #navbar-nav {
+        display: none;
+    }
+
+    #navbar-hamburger {
+        display: block;
     }
 
     #banner-logo {
@@ -49,7 +53,10 @@
     }
 
     .description-content-header {
-        text-align: center;
         margin-top: 1em;
+    }
+
+    .description-content-header, .description-content-text {
+        text-align: center;
     }
 }
