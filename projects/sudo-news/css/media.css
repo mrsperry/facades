@@ -1,0 +1,33 @@
+/* 1200px */
+@media only screen and (max-width: 75em) {
+    #article-container {
+        justify-content: space-around;
+    }
+}
+
+/* 880px */
+@media only screen and (max-width: 55em) {
+    #featured-image {
+        display: none;
+    }
+}
+
+/* 800px */
+@media only screen and (max-width: 50em) {
+    #navbar {
+        justify-content: center;
+    }
+
+    #navbar-logo {
+        display: none;
+    }
+
+    #navbar-nav > a {
+        font-size: 1em;
+        padding: 0em 0.5em;
+    }
+
+    #banner-about-header {
+        font-size: 3.5em;
+    }
+}
