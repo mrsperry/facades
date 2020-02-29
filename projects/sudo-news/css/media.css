@@ -23,11 +23,11 @@
     }
 
     #navbar-nav > a {
-        font-size: 1em;
+        font-size: 0.8em;
         padding: 0em 0.5em;
     }
 
     #banner-about-header {
-        font-size: 3.5em;
+        font-size: 3em;
     }
 }
