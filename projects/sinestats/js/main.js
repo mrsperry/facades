@@ -117,6 +117,7 @@ class Graph {
             }]
         },
         "options": {
+            "responsive": true,
             "animation": false,
             "legend": {
                 "display": false
@@ -187,6 +188,7 @@ class Graph {
             }]
         },
         "options": {
+            "responsive": true,
             "aspectRatio": 1,
             "legend": {
                 "display": false

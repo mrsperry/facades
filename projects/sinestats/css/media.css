@@ -1,0 +1,36 @@
+/* 1120px */
+@media only screen and (max-width: 70em) {
+    #navbar-links {
+        display: none;
+    }
+
+    #navbar-hamburger {
+        display: block;
+    }
+
+    #server-measures, #server-data {
+        flex-direction: column;
+    }
+
+    .body, #content {
+        max-width: 100%;
+    }
+
+    .graph-holder > canvas {
+        max-width: 100%;
+    }
+
+    #ssl-connections {
+        margin-top: 1em;
+    }
+
+    #footer,  #footer > ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #footer > ul:first-child > li:first-child {
+        text-align: center;
+        flex-basis: 100%;
+    }
+}
