@@ -81,19 +81,19 @@ body {
 .description > a {
     flex-shrink: 0;
     border-radius: 50%;
-    box-shadow: 0.1em 0.1em 0.2em #000000;
+    box-shadow: 0.1em 0.1em 1em #CCCCCC;
     overflow: hidden;
 }
 
 .description > a:hover {
-    box-shadow: 0.1em 0.1em 0.2em hsl(200, 100%, 40%);
+    box-shadow: 0.1em 0.1em 2em hsla(200, 100%, 40%, 0.8);
 }
 
 .description > a, .description > a:hover {
-    -webkit-transition: box-shadow 250ms linear;
-    -moz-transition: box-shadow 250ms linear;
-    -o-transition: box-shadow 250ms linear;
-    transition: box-shadow 250ms linear;
+    -webkit-transition: box-shadow 150ms linear;
+    -moz-transition: box-shadow 150ms linear;
+    -o-transition: box-shadow 150ms linear;
+    transition: box-shadow 150ms linear;
 }
 
 .description > a, .description > a > img {
