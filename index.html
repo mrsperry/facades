@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Websites - Joshua Sperry</title>
+        <title>Portfolio - Joshua Sperry</title>
+        <!-- Meta -->
+        <meta name="charset" content="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="A collection of website facades created by Joshua Sperry">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="A collection of websites curated as a portfolio">
+        <meta name="keywords" content="Joshua Sperry, portfolio, websites, personal projects, web dev, front end">
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="src/css/global.css">
         <link rel="stylesheet" type="text/css" href="src/css/index.css">
+        <link rel="stylesheet" type="text/css" href="src/css/media.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
         <script>
@@ -19,77 +25,75 @@
     <body>
         <!-- Navbar -->
         <nav id="nav" class="flex flex-justify-center">
-            <div id="nav-navbar" class="flex flex-align-center">
-                <a class="nav-item" href="../">Home</a>
-                <a class="nav-item" href="../games">Games</a>
-                <a class="nav-item nav-active">Websites</a>
-                <a class="nav-item" href="../visuals">Visuals</a>
+            <div id="nav-navbar" class="flex">
+                <a href="../">About Me</a>
+                <a class="nav-active">Portfolio</a>
+                <a href="../games">Games</a>
+                <a href="../visuals">Visuals</a>
             </div>
         </nav>
-        <!-- Description -->
-        <div id="description-container" class="flex flex-justify-center">
-            <div id="content">
-                <div class="description flex flex-align-center">
+        <!-- Main content -->
+        <main id="content" class="flex flex-column">
+            <section id="personal-projects">
+                <header>
+                    <h1 id="personal-projects-header">Personal Projects</h1>
+                </header>
+                <!-- Fanlite Engineering -->
+                <article class="description flex flex-align-center">
                     <a href="projects/fanlite-engineering/">
                         <img alt="Fanlite Engineering" src="src/images/fanlite-engineering.jpg">
                     </a>
                     <div class="description-content">
-                        <h2 class="description-content-header"><a href="projects/fanlite-engineering/">Fanlite Engineering</a></h2>
-                        <div class="description-content-text">
-                            <p>With a focus on clean and spacious placement of information this page is intended to allow consumption of information at a medium pace.</p>
-                            <p>Its intended use case is for higher-end professional businesses that aspire for minimal or spacious aesthetics while still relaying a moderate amount of information.</p>
-                        </div>
+                        <h2><a href="projects/fanlite-engineering/">Fanlite Engineering</a></h2>
+                        <p>With a focus on clean and spacious placement of information this page is intended to allow consumption of information at a medium pace.</p>
+                        <p>Its intended use case is for higher-end professional businesses that aspire for minimal or spacious aesthetics while still relaying a moderate amount of information.</p>
                     </div>
-                </div>
-                <div class="description flex flex-align-center">
+                </article>
+                <!-- sudo news -->
+                <article class="description flex flex-align-center">
                     <a href="projects/sudo-news/">
                         <img alt="./sudo news" src="src/images/sudo-news.jpg">
                     </a>
                     <div class="description-content">
-                        <h2 class="description-content-header"><a href="projects/sudo-news/">sudo news</a></h2>
-                        <div class="description-content-text">
-                            <p>Intended as a technical news site I wanted to be sure you could quickly access article information. Due to the article related layout, this page can quickly be transformed into a personal blog.</p>
-                            <p>The number of articles available as well as the featured content can be easily adjusted via Javascript to allow for a dynamic page.</p>
-                        </div>
+                        <h2><a href="projects/sudo-news/">sudo news</a></h2>
+                        <p>Intended as a technical news site I wanted to be sure you could quickly access article information. Due to the article related layout, this page can quickly be transformed into a personal blog.</p>
+                        <p>The number of articles available as well as the featured content can be easily adjusted via Javascript to allow for a dynamic page.</p>
                     </div>
-                </div>
-                <div class="description flex flex-align-center">
+                </article>
+                <!-- CyntraSafe -->
+                <article class="description flex flex-align-center">
                     <a href="projects/cyntrasafe/">
                         <img alt="CyntraSafe" src="src/images/cyntrasafe.jpg">
                     </a>
                     <div class="description-content">
-                        <h2 class="description-content-header"><a href="projects/cyntrasafe/">CyntraSafe</a></h2>
-                        <div class="description-content-text">
-                            <p>Designed to be a newly updated cyber security website, this page's contents are intended to be slightly outdated with brand new CSS.</p>
-                            <p>This page could easily launched immediately and be up to par with other websites in the industry.</p>
-                        </div>
+                        <h2><a href="projects/cyntrasafe/">CyntraSafe</a></h2>
+                        <p>Designed to be a newly updated cyber security website, this page's contents are intended to be slightly outdated with brand new CSS.</p>
+                        <p>This page could easily launched immediately and be up to par with other websites in the industry.</p>
                     </div>
-                </div>
-                <div class="description flex flex-align-center">
+                </article>
+                <!-- LoveLotus -->
+                <article class="description flex flex-align-center">
                     <a href="projects/lovelotus/">
                         <img alt="LoveLotus" src="src/images/lovelotus.jpg">
                     </a>
                     <div class="description-content">
-                        <h2 class="description-content-header"><a href="projects/lovelotus/">LoveLotus</a></h2>
-                        <div class="description-content-text">
-                            <p>Modern and sleek, this layout is something you'd see in the current digital age. Focusing on bright colors and spacious design, relevant content is always visible and pronounced.</p>
-                            <p>Its current implementation is an online dating app, providing users with relevant information about potential matches while keeping the UI clean.</p>
-                        </div>
+                        <h2><a href="projects/lovelotus/">LoveLotus</a></h2>
+                        <p>Modern and sleek, this layout is something you'd see in the current digital age. Focusing on bright colors and spacious design, relevant content is always visible and pronounced.</p>
+                        <p>Its current implementation is an online dating app, providing users with relevant information about potential matches while keeping the UI clean.</p>
                     </div>
-                </div>
-                <div class="description flex flex-align-center">
+                </article>
+                <!-- SineStats -->
+                <article class="description flex flex-align-center">
                     <a href="projects/sinestats/">
                         <img alt="SineStats" src="src/images/sinestats.jpg">
                     </a>
                     <div class="description-content">
-                        <h2 class="description-content-header"><a href="projects/sinestats/">SineStats</a></h2>
-                        <div class="description-content-text">
-                            <p>This page is an example of a server dashboard, allowing monitoring of server resources at a glance. Analytics are clearly communicated via line graphs and doughnut charts.</p>
-                            <p>The design is intended to be minimal, displaying information that is only relevant to the selected server. The colorful graphs catch your eye first while the colored text relays additional information.</p>
-                        </div>
+                        <h2><a href="projects/sinestats/">SineStats</a></h2>
+                        <p>This page is an example of a server dashboard, allowing monitoring of server resources at a glance. Analytics are clearly communicated via line graphs and doughnut charts.</p>
+                        <p>The design is intended to be minimal, displaying information that is only relevant to the selected server. The colorful graphs catch your eye first while the colored text relays additional information.</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     </body>
 </html>
