@@ -83,7 +83,7 @@ p {
 /* Fonts */
 @font-face {
   font-family: "Klein";
-  src: url("../../fonts/klein-regular.ttf");
+  src: url("../fonts/klein-regular.ttf");
 }
 :root {
   font-family: "Klein";
