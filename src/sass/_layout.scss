@@ -1,0 +1,121 @@
+@use "base";
+
+/* Media queries */
+/* 640px */
+@media only screen and (max-width: 40em) {
+    #nav-navbar > a + a {
+        margin-left: 1rem;
+    }
+
+    .description, .description:nth-child(odd) {
+        flex-direction: column-reverse;
+        margin: 3rem 0rem;
+    }
+
+    .description-content {
+        margin: 0rem;
+
+        p {
+            display: none;
+        }
+    }
+
+    img {
+        border-radius: 1em;
+    }
+}
+
+/* Animations */
+@keyframes slide-left {
+    0% { transform: translateX(20%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(-20%); }
+    100% { transform: translateX(0); }
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Klein";
+    src: url("../../fonts/klein-regular.ttf")
+}
+
+:root {
+    font-family: "Klein";
+    font-size: 16px;
+    color: #DDDDDD;
+}
+
+/* Containers */
+body, #nav:before {
+    background-color: base.$bg-color;
+    background-image: radial-gradient(circle at center, base.$bg-color, hsl(219, 40%, 8%));
+}
+
+#content, #nav-navbar {
+    max-width: 75rem;
+}
+
+#content {
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+/* Navbar */
+#nav {
+    position: relative;
+    background-color: base.$bg-color;
+    box-shadow: 0.1rem 0rem 1rem hsla(219, 40%, 10%, 0.5);
+    padding: 1rem 0rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        filter: blur(5rem);
+        top: 0rem;
+        left: 0rem;
+        bottom: 0rem;
+        right: 0rem;
+    }
+}
+
+#nav-navbar {
+    z-index: 1;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0rem 2rem;
+    margin: auto;
+
+    a + a {
+        margin-left: 2rem;
+    }
+}
+
+.nav-active {
+    color: base.$highlight-color;
+}
+
+/* Content */
+#personal-projects-header {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid base.$break-color;
+}
+
+.description {
+    animation: fade-in 1000ms ease-out, slide-right 750ms ease-out;
+
+    &:nth-child(odd) {
+        animation: fade-in 1000ms ease-out, slide-left 750ms ease-out;
+        flex-direction: row-reverse;
+    }
+}
+
+.description-content {
+    margin: 1rem;
+
+    p:last-child {
+        margin-top: 1rem;
+    }
+}

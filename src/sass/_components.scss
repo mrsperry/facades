@@ -1,0 +1,36 @@
+@use "base";
+
+html {
+    overflow-x: hidden;
+}
+
+a {
+    color: base.$link-color;
+    @include base.transition(color);
+
+    &:hover {
+        color: base.$highlight-color;
+        @include base.transition(color);
+    }
+}
+
+img, img:hover, img:active {
+    border-radius: 50%;
+    @include base.transition(box-shadow);
+}
+
+img {
+    box-shadow: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.75);
+    
+    &:hover, &:active {
+        box-shadow: 0rem 0rem 1.5rem base.$link-color;
+    }
+}
+
+h1, h2 {
+    margin-top: 0rem;
+}
+
+p {
+    margin: 0rem;
+}

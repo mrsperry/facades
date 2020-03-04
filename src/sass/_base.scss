@@ -1,0 +1,18 @@
+$bg-color: hsl(212, 40%, 18%);
+$break-color: hsla(0, 0%, 100%, 0.4);
+$link-color: hsl(210, 85%, 65%);
+$highlight-color: hsl(150, 85%, 65%);
+
+@mixin transition($property) {
+    -webkit-transition: $property 250ms linear;
+    -moz-transition: $property 250ms linear;
+    -o-transition: $property 250ms linear;
+    transition: $property 250ms linear;
+}
+
+@mixin animation($name, $duration) {
+    -webkit-animation: $name $duration ease-out;
+    -moz-animation: $name $duration ease-out;
+    -o-animation: $name $duration ease-out;
+    animation: $name $duration ease-out;
+}
