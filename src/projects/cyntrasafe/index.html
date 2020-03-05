@@ -2,15 +2,17 @@
 <html lang="en">
     <head>
         <title>CyntraSafe - Joshua Sperry</title>
+        <!-- Meta -->
+        <meta name="charset" content="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="An example of a modern cyber-security company's home page by Joshua Sperry">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="An example of a modern cyber-security company's home page">
+        <meta name="keywords" content="Joshua Sperry, portfolio, personal projects, Cyntrasafe, cyber security">
         <link rel="icon" href="images/icon.png">
         <!-- Font Awesome -->
         <link rel="stylesheet" type="text/css" href="../../libraries/fontawesome-free-5.12.0-web/css/all.min.css">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="../../css/global.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/media.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
         <script>
@@ -21,72 +23,71 @@
             gtag('config', 'UA-130264842-4');
         </script>
     </head>
-    <body class="flex flex-column flex-align-center">
-        <div id="header-background" class="container-max">
-            <div class="container">
-                <nav class="flex flex-justify-between flex-align-center">
-                    <h1 id="navbar-brand" class="flex flex-align-center">
-                        <img alt="Lock" src="images/icon-2.png">
-                        CyntraSafe
+    <body>
+        <header>
+            <nav>
+                <div id="nav-container">
+                    <h1 id="header-brand">
+                        <img alt="Logo" src="images/icon-2.png">CyntraSafe
                     </h1>
-                    <div id="navbar-nav">
-                        <div id="navbar-links" class="flex flex-align-center">
-                            <a>Features</a>
-                            <a>Pricing</a>
-                            <a>Sign In</a>
-                            <button>Create an Account</button>
+                    <ul id="nav-links">
+                        <li>
+                            <i id="hamburger-menu" class="fas fa-bars">
+                                <input type="checkbox">
+                            </i>
+                        </li>
+                        <li><a>Features</a></li>
+                        <li><a>Pricing</a></li>
+                        <li><a>Sign In</a></li>
+                        <li><button>Create an Account</button></li>
+                    </ul>
+                    <ul id="nav-hamburger">
+                        <i class="fas fa-bars"></i>
+                        <input type="checkbox">
+                        <div id="nav-hamburger-links">
+                            <li>Features</li>
+                            <li>Pricing</li>
+                            <li>Sign In</li>
+                            <li>Create an Account</li>
                         </div>
-                        <div id="navbar-hamburger">
-                            <i class="fas fa-bars"></i>
-                            <input type="checkbox">
-                            <div id="navbar-hamburger-links" class="flex flex-column">
-                                <div>Features</div>
-                                <div>Pricing</div>
-                                <div>Sign In</div>
-                                <div>Create an Account</div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div id="header" class="flex">
-                    <div id="header-text" class="flex flex-column">
-                        <h1>Keep your network safe from intrusions, phishing, cyber attacks and more</h1>
-                        <p>Track server diagnostics. Get notified when security updates are available. Prevent intrusions before they occur. Keep your teams updated to spot errors before your clients do.</p>
-                    </div>
-                    <img id="header-image" alt="Dashboard" src="images/header.jpg">
+                    </ul>
                 </div>
-            </div>
-        </div>
-        <div id="integrations-background" class="container-max">
-            <div class="container">
-                <div id="integrations" class="flex flex-justify-between flex-align-center">
-                    <p>Get notifications to your team immediately with our <span class="bold">Slack Integration</span>.</p>
-                    <button id="integrations-button">Find out more</button>
-                </div>
-            </div>
-        </div>
-        <div id="account-creation-background" class="container-max">
-            <div class="container">
-                <div id="account-creation" class="flex flex-column flex-align-center centered">
-                    <h1>Trusted by over 4,000 clients</h1>
-                    <p>We're already monitoring over 24,000 systems worldwide. Secure your servers with us in seconds.</p>
-                    <button>Create an account</button>
-                </div>
-            </div>
-        </div>
-        <div class="container-small">
-            <div id="about-us" class="flex flex-column centered">
+            </nav>
+            <figure>
+                <figcaption>
+                    <h1>Keep your network safe from intrusions, phishing, cyber attacks and more</h1>
+                    <p>Track server diagnostics. Get notified when security updates are available. Prevent intrusions before they occur. Keep your teams updated to spot errors before your clients do.</p>
+                </figcaption>
+                <img alt="Dashboard showcase" src="images/header.jpg">
+            </figure>
+        </header>
+        <!-- Integration -->
+        <section id="integration">
+            <article>
+                <p>Get notifications to your team immediately with our <span>Slack Integration</span>.</p>
+                <button>Find out more</button>
+            </article>
+        </section>
+        <!-- Account creation -->
+        <section id="account">
+            <article>
+                <h1>Trusted by over 4,000 clients</h1>
+                <p>We're already monitoring over 24,000 systems worldwide. Secure your servers with us in seconds.</p>
+                <button>Create an account</button>
+            </article>
+        </section>
+        <!-- About -->
+        <section id="about">
+            <article>
                 <h1>CyntraSafe is a network monitoring server that regularly checks the integrity of your servers for intrusions</h1>
                 <p>Through our dashboard you can view your server's diagnostics and quickly see if there are security risks that need to be addressed. Our trusted professionals are on standby 24/7 ready to tackle any intrusion of your network.</p>
                 <h1>Not just monitoring</h1>
                 <p>We actively take steps to improve and update your networks security. All modifications to your network are logged and can easily be reviewed or reverted if desired. Our coverage applies to all facets of your network: websites, cloud hosting, data centers or on-site hosting.</p>
                 <h1>Control your notifications</h1>
                 <p>You have full control over who gets notified for what. Alerts for SSL certificates, DDoS protection, server maintenance and more can all be toggled or only sent to specific team members. We understand the stress too many alerts can put on a security team so we classify priority on ALL of our alerts.</p>
-            </div>
-        </div>
-    </body>
-    <footer class="container-max flex flex-justify-center">
-        <div id="footer" class="flex flex-centered">
+            </article>
+        </section>
+        <footer>
             <a>Terms</a>
             <i class="fas fa-circle"></i>
             <a>Privacy</a>
@@ -94,6 +95,6 @@
             <a>Legal</a>
             <i class="fas fa-circle"></i>
             <a>Contact</a>
-        </div>
-    </footer>
+        </footer>
+    </body>
 </html>
