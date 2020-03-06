@@ -1,0 +1,39 @@
+@use "../../../src/sass/global";
+
+@use "base";
+
+a {
+    @include global.transition(color, 250ms, linear);
+    color: base.$link-color;
+    cursor: pointer;
+
+    &:hover, &:active {
+        @include global.transition(color, 250ms, linear);
+        color: base.$link-hover-color;
+    }
+}
+
+figure > img {
+    border-radius: 50%;
+}
+
+span.logo {
+    color: base.$logo-bg-color;
+}
+
+ul {
+    padding: 0rem;
+    list-style-type: none;
+}
+
+span.logo {
+    font-weight: bold;
+}
+
+h1, p + p {
+    margin: 0rem;
+}
+
+address {
+    font-style: normal;
+}

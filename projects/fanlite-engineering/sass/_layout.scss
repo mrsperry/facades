@@ -1,0 +1,250 @@
+@use "../../../src/sass/global";
+
+@use "base";
+
+/* Fonts */
+@font-face {
+    font-family: "Klein";
+    src: url("../fonts/klein-regular.ttf");
+}
+
+@font-face {
+    font-family: "Pakenham";
+    src: url("../fonts/pakenham-regular.ttf");
+    /* Only use this font for numbers (0-9) */
+    unicode-range: U+30-39;
+}
+
+:root {
+    font-family: "Pakenham", "Klein";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Containers */
+footer, section#cards {
+    @include global.flex();
+}
+
+section#about-us {
+    @include global.flex(column);
+}
+
+nav, section {
+    max-width: 60rem;
+    margin: 0rem auto;
+}
+
+header {
+    background-color: #EAEDF2;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+}
+
+footer {
+    color: base.$light-text-color;
+    background-color: base.$logo-bg-color;
+}
+
+/* Navbar */
+nav {
+    @include global.flex(row, space-between);
+    padding-top: 1rem;
+}
+
+#nav-links {
+    @include global.flex();
+
+    li {
+        @include global.transition(border-bottom, 250ms, linear);
+        cursor: pointer;
+        padding: 0rem 0.5rem;
+        border-bottom: 2px solid transparent;
+
+        &:hover, &:active, &.active {
+            @include global.transition(border-bottom, 250ms, linear);
+            border-bottom: 2px solid base.$dark-text-color;
+        }
+
+        &.active {
+            cursor: default;
+        }
+
+        + li {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+#logo-container {
+    @include global.flex(column, flex-start, flex-start);
+    padding: 0rem 0.5rem;
+
+    span {
+        font-size: 0.83em;
+
+        &:first-child {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-size: 1em;
+        }
+    }
+}
+
+/* Banner */
+#banner {
+    @include global.flex(row, center, flex-start);
+
+    span.logo {
+        font-size: 15em;
+        margin-right: 1rem;
+    }
+
+    div {
+        @include global.flex(column, flex-start, flex-start);
+        font-size: 1.5em;
+        margin-top: 1.75rem;
+
+        span:not(:first-child) {
+            font-weight: bold;
+            font-size: 1.35em;
+        }
+
+        span:last-of-type {
+            color: base.$logo-highlight-color;
+            font-size: 2em;
+        }
+
+        button {
+            @include global.transition(background-color, 250ms, linear);
+            color: base.$light-text-color;
+            background-color: base.$link-color;
+            cursor: pointer;
+            font-family: "Klein";
+            font-size: 1rem;
+            font-weight: 400;
+            border-radius: 1rem;
+            padding: 1rem;
+            border: none;
+            margin-top: 1rem;
+
+            &:hover, &:active {
+                @include global.transition(background-color, 250ms, linear);
+                background-color: base.$link-hover-color;
+            }
+        }
+    }
+}
+
+/* Cards */
+section#cards {
+    margin-top: -10rem;
+
+    article {
+        @include global.flex(column, flex-start);
+        @include global.transition(border-bottom, 250ms, linear);
+        position: relative;
+        text-align: center;
+        background-color: base.$light-text-color;
+        box-shadow: 0rem 0rem 1rem base.$shadow-color;
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem;
+        border-bottom: 0.5rem solid transparent;
+        margin: 1rem;
+
+        &:hover, &:active {
+            @include global.transition(border-bottom, 250ms, linear);
+            border-bottom: 0.5rem solid base.$logo-bg-color;
+        }
+
+        a {
+            position: absolute;
+            font-weight: bold;
+            bottom: 2rem;
+        }
+    }
+}
+
+/* About */
+section#about-us > article {
+    &:nth-child(even) > figure {
+        flex-direction: row-reverse;
+    }
+
+    figure {
+        @include global.flex();
+
+        img {
+            box-shadow: 0rem 0rem 1rem base.$shadow-color;
+        }
+
+        figcaption {
+            @include global.flex(column, flex-start, flex-start);
+            margin: 0rem 1rem;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    @include global.flex(row, center, flex-start);
+    margin-top: 1rem;
+
+    ul {
+        margin: 1rem;
+
+        li:first-child {
+            font-size: 1.5em;
+        }
+
+        a {
+            color: base.$footer-link-color;
+
+            &:hover, &:active {
+                color: base.$footer-link-hover-color;
+            }
+        }
+    }
+}
+
+/* Media queries */
+@media only screen and (max-width: 900px) {
+    section#cards {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        height: 35rem;
+    }
+
+    nav #nav-links > li {
+        font-size: 0.8em;
+        
+        + li {
+            margin-left: 0.5rem;
+        }
+    }
+
+    #banner {
+        font-size: 0.7em;
+    }
+
+    section#about-us > article > figure, section#about-us > article:nth-child(even) > figure {
+        flex-direction: column;
+        text-align: center;
+
+        figcaption > h1 {
+            align-self: center;
+            margin-top: 1rem;
+        }
+    }
+}

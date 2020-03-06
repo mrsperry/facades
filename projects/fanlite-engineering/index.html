@@ -2,15 +2,17 @@
 <html lang="en">
     <head>
         <title>Fanlite Engineering - Joshua Sperry</title>
+        <!-- Meta -->
+        <meta name="charset" content="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="An example of a professional engineering company website by Joshua Sperry">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="An example of a professional engineering company's website">
+        <meta name="keywords" content="Joshua Sperry, portfolio, personal projects, Fanlite Engineering, engineering">
         <link rel="icon" href="images/icon.png">
         <!-- Font Awesome -->
         <link rel="stylesheet" type="text/css" href="../../src/libraries/fontawesome-free-5.12.0-web/css/all.min.css">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="../../src/css/global.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/media.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
         <script>
@@ -21,129 +23,96 @@
             gtag('config', 'UA-130264842-4');
         </script>
     </head>
-    <body class="flex flex-column flex-align-center">
-        <div id="content-bg">
-            <img id="content-bg-image" alt="Low-rise apartment buildings" src="images/background.jpg">
-        </div>
-        <div id="content-container">
-            <!-- Navbar -->
-            <nav id="navbar" class="flex flex-align-center flex-justify-between">
-                <div id="navbar-brand" class="flex flex-column">
-                    <div id="navbar-brand-name">
-                        <span class="logo">F</span>anlite
-                    </div>
-                    <div id="navbar-brand-subtitle">Engineering</div>
+    <body>
+        <header>
+            <nav>
+                <div id="logo-container">
+                    <span><span class="logo">F</span>anlite</span>
+                    <span>Engineering</span>
                 </div>
-                <ul id="navbar-nav" class="flex">
-                    <li class="navbar-nav-item navbar-nav-item-active">Home</li>
-                    <li class="navbar-nav-item">Projects</li>
-                    <li class="navbar-nav-item">About Us</li>
-                    <li class="navbar-nav-item">Contact</li>
+                <ul id="nav-links">
+                    <li class="active">Home</li>
+                    <li>Projects</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
                 </ul>
-                <div id="navbar-hamburger">
-                    <i class="fas fa-bars"></i>
-                    <input type="checkbox">
-                    <div id="navbar-hamburger-links" class="flex flex-column">
-                        <div>Home</div>
-                        <div>Projects</div>
-                        <div>About Us</div>
-                        <div>Contact</div>
-                    </div>
-                </div>
             </nav>
             <!-- Banner -->
-            <div id="banner-container" class="flex flex-justify-center">
-                <div id="banner-logo" class="logo">F</div>
-                <div id="banner-message-container" class="flex flex-column">
-                    <div id="banner-message-welcome">Welcome to Fanlite.</div>
-                    <div id="banner-message-intro">Here, we redefine</div>
-                    <div id="banner-message-subject">Engineering.</div>
-                    <button id="banner-view-projects">
-                        View projects
-                        <i class="fas fa-angle-double-right"></i>
-                    </button>
+            <div id="banner">
+                <span class="logo">F</span>
+                <div>
+                    <span>Welcome to Fanlite.</span>
+                    <span>Here, we redefine</span>
+                    <span>Engineering.</span>
+                    <button>View projects <i class="fas fa-angle-double-right"></i></button>
                 </div>
             </div>
-            <!-- Cards -->
-            <div id="card-container" class="centered flex flex-justify-between">
-                <div class="card flex flex-column flex-align-center">
-                    <h3 class="card-title">About Us</h3>
-                    <p class="card-desc">At Fanlite we pride ourselves with having a wealth of experience and knowledge that we can apply to any project or conflict that arises during development.</p>
-                    <a class="card-link">
-                        <i class="fas fa-angle-double-right"></i>
-                        Continue reading
-                    </a>
-                </div>
-                <div class="card flex flex-column flex-align-center">
-                    <h3 class="card-title">Safety Guarantee</h3>
-                    <p class="card-desc">All of our projects are insured with our own custom policy, allowing you to sleep soundly with the guarantee that your building is secure and any problems that arise will be dealt with.</p>
-                    <a class="card-link">
-                        <i class="fas fa-angle-double-right"></i>
-                        Continue reading
-                    </a>
-                </div>
-                <div class="card flex flex-column flex-align-center">
-                    <h3 class="card-title">Our Projects</h3>
-                    <p class="card-desc">We have constructed all manor of buildings including residential, commercial, and industrial. Our service can adapt to whatever requirements your project may have.</p>
-                    <a class="card-link">
-                        <i class="fas fa-angle-double-right"></i>
-                        Continue reading
-                    </a>
-                </div>
-            </div>
-            <!-- Descriptions -->
-            <div id="description-container" class="flex flex-column">
-                <div class="description flex flex-align-center">
-                    <img alt="Intricate high-rise building" src="images/description-1.jpg">
-                    <div class="description-content">
-                        <h2 class="description-content-header">Innovated Architecture</h2>
-                        <div class="description-content-text">
-                            <p>With leading experts in both engineering and architecture we can provide a unique experience to our clients who wish to take their project to the next level.</p>
-                            <p>We offer a variety of pre-determined packages for interior and exterior layouts of your project as well as a custom package so that you can take control of your dream.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="description flex flex-align-center">
-                    <img alt="Intricate high-rise building" src="images/description-2.jpg">
-                    <div class="description-content">
-                        <h2 class="description-content-header">Quality Assurance</h2>
-                        <div class="description-content-text">
-                            <p>With references from over five hundred clients throughout the operating years of Fanlite, you have our guarantee that we will get it right the first time.</p>
-                            <p>Along with our word, each project comes with a one year quality assurance policy completely free of charge!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="description flex flex-align-center">
-                    <img alt="Intricate high-rise building" src="images/description-3.jpg">
-                    <div class="description-content">
-                        <h2 class="description-content-header">Our Goal</h2>
-                        <div class="description-content-text">
-                            <p>We aim to take our business, and your project, past the stars. We take pride in every completed project and aim to ad individuality to the market through our architecture.</p>
-                            <p>From our humble beginnings as a small window and door company, we have already achieved the impossible with our venture and we will continue to grow our excellence with your help.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-    <footer class="flex flex-justify-center">
-        <div id="footer-container" class="flex flex-justify-center">
-            <ol id="footer-contact">
+        </header>
+        <!-- Cards -->
+        <section id="cards">
+            <article>
+                <h1>About Us</h1>
+                <p>At Fanlite we pride ourselves with having a wealth of experience and knowledge that we can apply to any project or conflict that arises during development.</p>
+                <a><i class="fas fa-angle-double-right"></i> Continue reading</a>
+            </article>
+            <article>
+                <h1>Safety Guarantee</h1>
+                <p>All of our projects are insured with our own custom policy, allowing you to sleep soundly with the guarantee that your building is secure and any problems that arise will be dealt with.</p>
+                <a><i class="fas fa-angle-double-right"></i> Continue reading</a>
+            </article>
+            <article>
+                <h1>Our Projects</h1>
+                <p>We have constructed all manor of buildings including residential, commercial, and industrial. Our service can adapt to whatever requirements your project may have.</p>
+                <a><i class="fas fa-angle-double-right"></i> Continue reading</a>
+            </article>
+        </section>
+        <!-- About -->
+        <section id="about-us">
+            <article>
+                <figure>
+                    <img alt="High-rise project example" src="images/description-1.jpg">
+                    <figcaption>
+                        <h1>Innovated Architecture</h1>
+                        <p>With leading experts in both engineering and architecture we can provide a unique experience to our clients who wish to take their project to the next level.</p>
+                        <p>We offer a variety of pre-determined packages for interior and exterior layouts of your project as well as a custom package so that you can take control of your dream.</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img alt="High-rise project example" src="images/description-2.jpg">
+                    <figcaption>
+                        <h1>Quality Assurance</h1>
+                        <p>With references from over five hundred clients throughout the operating years of Fanlite, you have our guarantee that we will get it right the first time.</p>
+                        <p>Along with our word, each project comes with a one year quality assurance policy completely free of charge!</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img alt="High-rise project example" src="images/description-3.jpg">
+                    <figcaption>
+                        <h1>Our Goal</h1>
+                        <p>We aim to take our business, and your project, past the stars. We take pride in every completed project and aim to ad individuality to the market through our architecture.</p>
+                        <p>From our humble beginnings as a small window and door company, we have already achieved the impossible with our venture and we will continue to grow our excellence with your help.</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+        <footer>
+            <ul>
                 <li>Contact</li>
-                <li id="footer-contact-number">305-123-4567</li>
+                <li>305-123-4567</li>
                 <li>contact@fanlite-engineering.com</li>
-                <li>1234 Variety Ave. #123</li>
-                <li>
-                    <i class="fas fa-copyright"></i>
-                    Fanlite Engineering 2020-2020
-                </li>
-            </ol>
-            <ol id="footer-media">
+                <li><address>1234 Variety Ave. #123</address></li>
+                <li><i class="far fa-copyright"></i> Fanlite Engineering 2020-2020</li>
+            </ul>
+            <ul>
                 <li>Media</li>
                 <li><a>Facebook</a></li>
                 <li><a>Twitter</a></li>
                 <li><a>Instagram</a></li>
-            </ol>
-        </div>
-    </footer>
+            </ul>
+        </footer>
+    </body>
 </html>
