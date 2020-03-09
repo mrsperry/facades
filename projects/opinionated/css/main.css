@@ -1,0 +1,313 @@
+/* Mixins */
+/* Navbar hamburger */
+#nav-hamburger {
+  position: relative;
+  display: none;
+  font-size: 3em;
+}
+#nav-hamburger input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0rem;
+  left: 0rem;
+  bottom: 0rem;
+  right: 0rem;
+  margin: 0rem;
+}
+#nav-hamburger input:checked ~ #nav-hamburger-links {
+  display: block;
+}
+#nav-hamburger #nav-hamburger-links {
+  position: absolute;
+  display: none;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  z-index: 1;
+  width: max-content;
+  top: 4rem;
+  right: 0rem;
+  border-radius: 0.5rem 0rem 0.5rem 0.5rem;
+}
+#nav-hamburger #nav-hamburger-links li {
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+}
+#nav-hamburger #nav-hamburger-links li:hover, #nav-hamburger #nav-hamburger-links li:active {
+  background-color: #CCCCCC;
+}
+#nav-hamburger #nav-hamburger-links li:first-child {
+  border-radius: 0.5rem 0rem 0rem 0rem;
+}
+#nav-hamburger #nav-hamburger-links li:last-child {
+  border-top: 1px solid #AAAAAA;
+  border-radius: 0em 0em 0.5em 0.5em;
+}
+
+/* Elements */
+body {
+  margin: 0rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Variables */
+/* Fonts */
+:root {
+  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+  font-size: 16px;
+  color: #33334d;
+}
+
+/* Elements */
+header {
+  border-bottom: 1px solid #CCCCCC;
+}
+header h1 {
+  font-size: 2.5em;
+  padding-bottom: 0rem;
+  margin: 0rem;
+}
+header h2 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0.2rem 0rem 0.5rem;
+}
+
+section {
+  position: relative;
+  max-width: 50rem;
+  margin: 1.875rem;
+}
+section#nav {
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 15.5rem;
+}
+
+footer a, .email {
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  transition: color 250ms linear;
+  font-size: 0.9em;
+  color: #306ee8;
+  cursor: pointer;
+}
+footer a:hover, footer a:active, .email:hover, .email:active {
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  transition: color 250ms linear;
+  color: #8cbff2;
+}
+
+blockquote {
+  padding-left: 1rem;
+  border-left: 4px solid #CCCCCC;
+  margin: 1rem 1rem;
+}
+
+code {
+  font-family: "Monaco", monospace;
+  background-color: #F3F3F3;
+  border-radius: 0.5rem;
+  padding: 0rem 1rem;
+  border: 1px solid #CCCCCC;
+}
+code.keyword {
+  color: #f76e9c;
+  border-radius: 0.25rem;
+  padding: 0rem 0.3rem;
+}
+
+/* Classes */
+.code-container {
+  white-space: normal;
+}
+.code-container code {
+  display: block;
+  white-space: pre;
+}
+
+.email {
+  font-size: 1em;
+}
+
+/* Containers */
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  /* Credit to https://leaverou.github.io/css3patterns/#cross-dots */
+  background: radial-gradient(#282828 3px, transparent 4px), radial-gradient(#282828 3px, transparent 4px), linear-gradient(#333333 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #555555 75px, #555555 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #555555 76px, #555555 77px, transparent 78px, transparent 109px), #333333;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+section:last-of-type, aside {
+  background-color: #FAFAFA;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+aside {
+  position: fixed;
+  width: 12.5rem;
+}
+aside img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+/* Elements */
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+}
+figure figcaption {
+  text-align: center;
+}
+figure figcaption h1 {
+  font-size: 1.5em;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #CCCCCC;
+  margin: 1rem 0rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid #CCCCCC;
+  margin-top: 1rem;
+}
+footer a {
+  margin: 0rem 0.5rem;
+}
+
+article + article {
+  position: relative;
+  margin-top: 7.5rem;
+}
+article + article::before {
+  position: absolute;
+  content: "";
+  top: -3.75rem;
+  width: 50%;
+  height: 0.2rem;
+  margin: 0rem 25%;
+  background-color: #CCCCCC;
+}
+
+/* Media queries */
+@media only screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    width: auto;
+    max-width: none;
+  }
+  section#nav {
+    align-self: center;
+    width: auto;
+  }
+
+  aside {
+    position: static;
+    width: auto;
+  }
+  aside figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  aside figure figcaption {
+    padding: 0rem 1rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  .code-container code {
+    white-space: pre-wrap;
+  }
+}
+@media only screen and (max-width: 650px) {
+  body {
+    display: block;
+  }
+
+  section:last-of-type, aside {
+    border-radius: 0rem;
+  }
+
+  section {
+    margin: 2.5rem 0rem;
+  }
+
+  aside, aside figure figcaption {
+    padding: 0.5rem;
+  }
+
+  figure img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  figure figcaption h1 {
+    font-size: 1.2em;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+  header h2 {
+    font-size: 0.7em;
+  }
+
+  figure figcaption, article {
+    font-size: 0.8em;
+  }
+
+  article h2 {
+    font-size: 1.2em;
+  }
+
+  footer {
+    padding-top: 0.5rem;
+    margin-top: 0rem;
+  }
+  footer a {
+    font-size: 0.7em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

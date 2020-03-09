@@ -1,0 +1,85 @@
+@use "../../../src/sass/global";
+
+@use "base";
+
+/* Fonts */
+:root {
+    font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+    font-size: 16px;
+    color: base.$text-color;
+}
+
+/* Elements */
+header {
+    border-bottom: 1px solid base.$divider-color;
+
+    h1 {
+        font-size: 2.5em;
+        padding-bottom: 0rem;
+        margin: 0rem;
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0.2rem 0rem 0.5rem;
+    }
+}
+
+section {
+    position: relative;
+    max-width: 50rem;
+    margin: 1.875rem;
+
+    &#nav {
+        flex-shrink: 0;
+        align-self: stretch;
+        width: 15.5rem;
+    }
+}
+
+footer a, .email {
+    @include global.transition(color, 250ms, linear);
+    font-size: 0.9em;
+    color: base.$link-color;
+    cursor: pointer;
+
+    &:hover, &:active {
+        @include global.transition(color, 250ms, linear);
+        color: base.$link-hover-color;
+    }
+}
+
+blockquote {
+    padding-left: 1rem;
+    border-left: 4px solid base.$divider-color;
+    margin: 1rem 1rem;
+}
+
+code {
+    font-family: "Monaco", monospace;
+    background-color: base.$bg-offset-color;
+    border-radius: base.$border-radius;
+    padding: 0rem 1rem;
+    border: 1px solid base.$divider-color;
+
+    &.keyword {
+        color: base.$code-keyword-color;
+        border-radius: base.$border-radius / 2;
+        padding: 0rem 0.3rem;
+    }
+}
+
+/* Classes */
+.code-container {
+    white-space: normal;
+
+    code {
+        display: block;
+        white-space: pre;
+    }
+}
+
+.email {
+    font-size: 1em;
+}
