@@ -1,0 +1,87 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+nav {
+    @include mixins.flex(row, space-between);
+    color: variables.$light-text-color;
+    font-size: 1.25em;
+    max-width: variables.$large-width;
+    padding: 2rem;
+    margin: auto;
+
+    h1 {
+        @include mixins.flex();
+    }
+
+    ul {
+        @include mixins.flex();
+        list-style-type: none;
+        padding: 0rem;
+        margin: 0rem;
+
+        li + li {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+#nav-hamburger {
+    position: relative;
+    display: none;
+    font-size: 3em;
+
+    div {
+        @include mixins.flex(column, flex-start, stretch);
+        position: absolute;
+        display: none;
+        color: variables.$dark-text-color;
+        background-color: variables.$main-bg-color;
+        box-shadow: 0.1rem 0.1rem 1rem variables.$dark-text-color;
+        min-width: max-content;
+        right: 0rem;
+
+        a {
+            @include mixins.transition(background-color);
+            font-size: 1rem;
+            padding: 1rem;
+            border-bottom: none;
+
+            + a {
+                border-top: 1px solid variables.$dark-text-color;
+            }
+
+            &:hover, &:active {
+                background-color: variables.$light-hover-color;
+            }
+        }
+    }
+}
+
+#nav-hamburger > input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0em;
+    left: 0em;
+    bottom: 0rem;
+    left: 0rem;
+    margin: 0em;
+}
+
+#nav-hamburger input:checked ~ div {
+    display: flex;
+}
+
+@media only screen and (max-width: 896px) {
+    #nav-links {
+        display: none;
+    }
+
+    #nav-hamburger {
+        display: block;
+        margin: 0rem;
+    }
+}

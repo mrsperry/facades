@@ -1,0 +1,31 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+section {
+    @include mixins.flex();
+    color: variables.$dark-text-color;
+    background-color: variables.$main-bg-color;
+    padding: 1rem;
+
+    &.section-light {
+        color: variables.$light-text-color;
+        background-color: variables.$light-bg-color;
+    }
+
+    &.section-dark {
+        color: variables.$light-text-color;
+        background-color: variables.$dark-bg-color;
+    }
+
+    &.section-large {
+        padding: 2rem;
+    }
+
+    article {
+        @include mixins.flex(column);
+
+        &.article-row {
+            flex-direction: row;
+        }
+    }
+}

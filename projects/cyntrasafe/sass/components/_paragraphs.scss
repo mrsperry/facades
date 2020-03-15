@@ -1,0 +1,11 @@
+p {
+    text-align: center;
+
+    &.para-normal {
+        text-align: left;
+    }
+
+    &.para-large {
+        font-size: 1.5em;
+    }
+}

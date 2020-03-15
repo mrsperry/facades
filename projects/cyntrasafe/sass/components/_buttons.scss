@@ -1,0 +1,31 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+button {
+    @include mixins.transition(background-color);
+    font-size: inherit;
+    outline: none;
+    cursor: pointer;
+    color: variables.$light-text-color;
+    background-color: variables.$light-bg-color;
+    border-radius: variables.$border-radius;
+    padding: 1rem;
+    border: none;
+
+    &:hover, &:active {
+        background-color: variables.$blue-hover-color;
+    }
+
+    &.button-light {
+        color: variables.$dark-text-color;
+        background-color: variables.$main-bg-color;
+
+        &:hover, &:active {
+            background-color: variables.$light-hover-color;
+        }
+    }
+
+    &.margins {
+        margin: 1rem;
+    }
+}

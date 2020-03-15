@@ -23,62 +23,54 @@
             gtag('config', 'UA-130264842-4');
         </script>
     </head>
-    <body>
-        <header>
-            <nav>
-                <div id="nav-container">
-                    <h1 id="header-brand">
-                        <img alt="Logo" src="images/icon-2.png">CyntraSafe
-                    </h1>
-                    <ul id="nav-links">
-                        <li>
-                            <i id="hamburger-menu" class="fas fa-bars">
-                                <input type="checkbox">
-                            </i>
-                        </li>
-                        <li><a>Features</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>Sign In</a></li>
-                        <li><button>Create an Account</button></li>
-                    </ul>
-                    <ul id="nav-hamburger">
-                        <i class="fas fa-bars"></i>
-                        <input type="checkbox">
-                        <div id="nav-hamburger-links">
-                            <li>Features</li>
-                            <li>Pricing</li>
-                            <li>Sign In</li>
-                            <li>Create an Account</li>
-                        </div>
-                    </ul>
+    <body class="grid-bg">
+        <nav>
+            <h1>
+                <img alt="Logo" src="images/icon-2.png">CyntraSafe
+            </h1>
+            <ul id="nav-links">
+                <li><a class="active-link">Home</a></li>
+                <li><a>Features</a></li>
+                <li><a>Pricing</a></li>
+                <li><a>Sign In</a></li>
+                <li><button>Create an Account</button></li>
+            </ul>
+            <div id="nav-hamburger">
+                <i class="fas fa-bars"></i>
+                <input type="checkbox">
+                <div id="nav-hamburger-links">
+                    <a>Features</a>
+                    <a>Pricing</a>
+                    <a>Sign In</a>
+                    <a>Create an Account</a>
                 </div>
-            </nav>
-            <figure>
-                <figcaption>
-                    <h1>Keep your network safe from intrusions, phishing, cyber attacks and more</h1>
-                    <p>Track server diagnostics. Get notified when security updates are available. Prevent intrusions before they occur. Keep your teams updated to spot errors before your clients do.</p>
-                </figcaption>
-                <img alt="Dashboard showcase" src="images/header.jpg">
-            </figure>
-        </header>
+            </div>
+        </nav>
+        <figure id="main-header" class="vertical-align large-width">
+            <figcaption class="caption-left">
+                <h1 class="header-normal">Keep your network safe from intrusions, phishing, cyber attacks and more</h1>
+                <p class="para-normal para-large">Track server diagnostics. Get notified when security updates are available. Prevent intrusions before they occur. Keep your teams updated to spot errors before your clients do.</p>
+            </figcaption>
+            <img alt="Dashboard showcase" src="images/header.jpg">
+        </figure>
         <!-- Integration -->
-        <section id="integration">
-            <article>
-                <p>Get notifications to your team immediately with our <span>Slack Integration</span>.</p>
-                <button>Find out more</button>
+        <section class="section-light">
+            <article class="article-row small-width">
+                <p>Get notifications to your team immediately with our <span class="bold">Slack Integration</span>.</p>
+                <button class="button-light margins">Find out more</button>
             </article>
         </section>
         <!-- Account creation -->
-        <section id="account">
-            <article>
+        <section class="section-dark section-large">
+            <article class="small-width">
                 <h1>Trusted by over 4,000 clients</h1>
                 <p>We're already monitoring over 24,000 systems worldwide. Secure your servers with us in seconds.</p>
                 <button>Create an account</button>
             </article>
         </section>
         <!-- About -->
-        <section id="about">
-            <article>
+        <section>
+            <article class="small-width">
                 <h1>CyntraSafe is a network monitoring server that regularly checks the integrity of your servers for intrusions</h1>
                 <p>Through our dashboard you can view your server's diagnostics and quickly see if there are security risks that need to be addressed. Our trusted professionals are on standby 24/7 ready to tackle any intrusion of your network.</p>
                 <h1>Not just monitoring</h1>

@@ -1,0 +1,13 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+footer {
+    @include mixins.flex();
+    background-color: variables.$dark-bg-color;
+    padding: 2rem;
+
+    i.fas {
+        font-size: 0.5em;
+        padding: 1rem;
+    }
+}

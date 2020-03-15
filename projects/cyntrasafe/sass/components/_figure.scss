@@ -1,0 +1,22 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+figure {
+    @include mixins.flex();
+    padding: 2rem;
+
+    &.vertical-align {
+        align-items: flex-start;
+    }
+
+    img {
+        border-radius: variables.$border-radius;
+        width: 60%;
+    }
+
+    figcaption {
+        &.caption-left {
+            padding-right: 1rem;
+        }
+    }
+}

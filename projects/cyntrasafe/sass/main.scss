@@ -1,4 +1,18 @@
 @charset "UTF-8";
 
-@use "components";
-@use "layout";
+@use "base/fonts";
+
+@use "layout/backgrounds";
+@use "layout/body";
+@use "layout/nav";
+@use "layout/section";
+@use "layout/footer";
+
+@use "components/buttons";
+@use "components/links";
+@use "components/figure";
+@use "components/headers";
+@use "components/span";
+@use "components/paragraphs";
+
+@use "pages/index";

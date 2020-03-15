@@ -1,0 +1,16 @@
+@media only screen and (max-width: 1024px) {
+    #main-header {
+        img {
+            display: none;
+        }
+
+        figcaption h1, figcaption p {
+            text-align: center;
+            padding: 0rem;
+        }
+    }
+
+    nav ul {
+        font-size: 1rem;
+    }
+}
