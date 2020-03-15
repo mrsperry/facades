@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CyntraSafe - Joshua Sperry</title>
+        <!-- Meta -->
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="Sign in or sign up to CyntraSafe">
+        <meta name="keywords" content="Joshua Sperry, portfolio, personal projects, CyntraSafe, cyber security, sign up, sign in">
+        <link rel="icon" href="images/icon.png">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="../../src/libraries/fontawesome-free-5.12.0-web/css/all.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-130264842-4');
+        </script>
+    </head>
+    <body class="grid-bg">
+        <nav>
+            <h1>
+                <img alt="Logo" src="images/icon-2.png">CyntraSafe
+            </h1>
+            <ul id="nav-links">
+                <li><a href="./">Home</a></li>
+                <li><a>Features</a></li>
+                <li><a>Pricing</a></li>
+                <li><a class="link-active">Sign In</a></li>
+                <li><button>Create an Account</button></li>
+            </ul>
+            <div id="nav-hamburger">
+                <i class="fas fa-bars"></i>
+                <input type="checkbox">
+                <div id="nav-hamburger-links">
+                    <a>Features</a>
+                    <a>Pricing</a>
+                    <a>Sign In</a>
+                    <a>Create an Account</a>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <figure class="figure-vertical no-gutters">
+                <img class="image-small" src="images/world.svg">
+                <figcaption>
+                    <h1>Join the world's leading cybersecurity firm</h1>
+                    <p>Secure your network. Get notified before intrusions occur. Enjoy peace of mind.</p>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="section-stretch">
+            <!-- Sign in -->
+            <form class="form-medium" method="POST">
+                <h1>Sign In</h1>
+                <p>View your security at a glance.</p>
+                <label for="sign-in-email">Email:</label>
+                <input id="sign-in-email" type="email" placeholder="example@abc.com" required>
+                <label for="sign-in-password">Password:</label>
+                <input id="sign-in-password" type="password" required>
+                <a class="link-normal">Forgot Password?</a>
+                <button type="submit" disabled>Sign in</button>
+            </form>
+            <!-- Sign up -->
+            <form class="form-medium" method="POST">
+                <h1>Sign Up</h1>
+                <p>Take the first step in securing your network.</p>
+                <label for="log-up-name">Company Name:</label>
+                <input id="log-up-name"type="text" required>
+                <label for="sign-up-email">Email:</label>
+                <input id="sign-up-email" type="email" placeholder="example@abc.com" required>
+                <label for="sign-up-password">Password:</label>
+                <input id="sign-up-password" type="password" required>
+                <button type="submit" disabled>Create your account</button>
+            </form>
+        </section>
+        <footer>
+            <a>Terms</a>
+            <i class="fas fa-circle"></i>
+            <a>Privacy</a>
+            <i class="fas fa-circle"></i>
+            <a>Legal</a>
+            <i class="fas fa-circle"></i>
+            <a>Contact</a>
+        </footer>
+    </body>
+</html>

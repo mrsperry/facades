@@ -4,15 +4,27 @@
 a {
     @include mixins.transition(border-bottom);
     text-decoration: none;
+    color: variables.$light-text-color;
     cursor: pointer;
     padding-bottom: 0.2rem;
     border-bottom: 2px solid transparent;
 
-    &.active-link, &:hover, &:active {
+    &.link-active, &:hover, &:active {
         border-bottom: 2px solid variables.$light-text-color;
     }
 
-    &.active-link {
+    &.link-active {
         cursor: default;
+    }
+
+    &.link-normal {
+        @include mixins.transition(color);
+        color: variables.$link-color;
+        padding-bottom: 0rem;
+        border-bottom: none;
+
+        &:hover, &:active {
+            color: variables.$link-hover-color;
+        }
     }
 }

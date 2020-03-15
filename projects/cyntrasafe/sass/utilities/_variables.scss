@@ -2,6 +2,9 @@
 $light-text-color: #FFFFFF;
 $dark-text-color: #000000;
 
+$link-color: hsl(210, 100%, 40%);
+$link-hover-color: hsl(210, 100%, 75%);
+
 /* Backgrounds */
 $main-bg-color: #FFFFFF;
 $light-bg-color: hsl(215, 70%, 60%);
@@ -9,6 +12,8 @@ $dark-bg-color: hsl(215, 70%, 10%);
 
 $light-hover-color: hsl(0, 0%, 80%);
 $blue-hover-color: hsl(215, 70%, 70%);
+
+$shadow-color: #CCCCCC;
 
 /* Transitions */
 $transition-timing: 250ms;

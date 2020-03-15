@@ -5,13 +5,27 @@ figure {
     @include mixins.flex();
     padding: 2rem;
 
+    &.figure-vertical {
+        flex-direction: column;
+    }
+
     &.vertical-align {
         align-items: flex-start;
+    }
+
+    &.no-gutters {
+        padding: 0rem;
+        margin: 0rem;
     }
 
     img {
         border-radius: variables.$border-radius;
         width: 60%;
+
+        &.image-small {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
     }
 
     figcaption {

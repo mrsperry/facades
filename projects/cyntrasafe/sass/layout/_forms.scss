@@ -1,0 +1,35 @@
+@use "../utilities/variables";
+
+form {
+    box-shadow: 0rem 0rem 3rem variables.$shadow-color;
+    padding: 2rem;
+    margin: 0rem 2rem;
+
+    > * {
+        display: block;
+    }
+
+    &.form-medium {
+        min-width: 17.5rem;
+        margin-bottom: 5rem;
+    }
+
+    input {
+        padding: 0.5rem;
+        border: 1px solid variables.$shadow-color;
+    }
+
+    input, a {
+        margin: 0.5rem 0rem 1rem;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 0rem;
+    }
+
+    button {
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.5rem;
+    }
+}

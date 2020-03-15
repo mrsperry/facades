@@ -21,6 +21,10 @@ section {
         padding: 2rem;
     }
 
+    &.section-stretch {
+        align-items: stretch;
+    }
+
     article {
         @include mixins.flex(column);
 

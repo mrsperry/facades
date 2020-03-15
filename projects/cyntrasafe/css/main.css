@@ -145,6 +145,9 @@ section.section-dark {
 section.section-large {
   padding: 2rem;
 }
+section.section-stretch {
+  align-items: stretch;
+}
 section article {
   display: flex;
   flex-direction: column;
@@ -166,6 +169,34 @@ footer {
 footer i.fas {
   font-size: 0.5em;
   padding: 1rem;
+}
+
+form {
+  box-shadow: 0rem 0rem 3rem #CCCCCC;
+  padding: 2rem;
+  margin: 0rem 2rem;
+}
+form > * {
+  display: block;
+}
+form.form-medium {
+  min-width: 17.5rem;
+  margin-bottom: 5rem;
+}
+form input {
+  padding: 0.5rem;
+  border: 1px solid #CCCCCC;
+}
+form input, form a {
+  margin: 0.5rem 0rem 1rem;
+}
+form a {
+  display: inline-block;
+  margin-top: 0rem;
+}
+form button {
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
 }
 
 button {
@@ -196,15 +227,25 @@ button.margins {
 a {
   transition: border-bottom 250ms ease-in-out;
   text-decoration: none;
+  color: #FFFFFF;
   cursor: pointer;
   padding-bottom: 0.2rem;
   border-bottom: 2px solid transparent;
 }
-a.active-link, a:hover, a:active {
+a.link-active, a:hover, a:active {
   border-bottom: 2px solid #FFFFFF;
 }
-a.active-link {
+a.link-active {
   cursor: default;
+}
+a.link-normal {
+  transition: color 250ms ease-in-out;
+  color: #0066cc;
+  padding-bottom: 0rem;
+  border-bottom: none;
+}
+a.link-normal:hover, a.link-normal:active {
+  color: #80bfff;
 }
 
 figure {
@@ -214,12 +255,23 @@ figure {
   align-items: center;
   padding: 2rem;
 }
+figure.figure-vertical {
+  flex-direction: column;
+}
 figure.vertical-align {
   align-items: flex-start;
+}
+figure.no-gutters {
+  padding: 0rem;
+  margin: 0rem;
 }
 figure img {
   border-radius: 0.5rem;
   width: 60%;
+}
+figure img.image-small {
+  max-width: 15rem;
+  max-height: 15rem;
 }
 figure figcaption.caption-left {
   padding-right: 1rem;
