@@ -115,6 +115,11 @@ nav ul li + li {
   display: flex;
 }
 
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    font-size: 1rem;
+  }
+}
 @media only screen and (max-width: 896px) {
   #nav-links {
     display: none;
@@ -180,7 +185,7 @@ form > * {
   display: block;
 }
 form.form-medium {
-  min-width: 17.5rem;
+  min-width: 20rem;
   margin-bottom: 5rem;
 }
 form input {
@@ -311,6 +316,18 @@ p.para-large {
 
   nav ul {
     font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 896px) {
+  #sign-in-forms form {
+    padding: 1rem;
+    margin: 0rem 0.5rem 5rem 0.5rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  #sign-in-forms {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

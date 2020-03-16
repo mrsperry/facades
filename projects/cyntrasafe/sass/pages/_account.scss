@@ -1,0 +1,15 @@
+@media only screen and (max-width: 896px) {
+    #sign-in-forms {
+        form {
+            padding: 1rem;
+            margin: 0rem 0.5rem 5rem 0.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #sign-in-forms {
+        flex-direction: column;
+        align-items: center;
+    }
+}
