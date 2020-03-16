@@ -91,14 +91,14 @@ nav ul li + li {
   align-items: stretch;
   position: absolute;
   display: none;
-  color: #000000;
   background-color: #FFFFFF;
-  box-shadow: 0.1rem 0.1rem 1rem #000000;
+  box-shadow: 0rem 0rem 1rem #CCCCCC;
   min-width: max-content;
   right: 0rem;
 }
 #nav-hamburger div a {
   transition: background-color 250ms ease-in-out;
+  color: #000000;
   font-size: 1rem;
   padding: 1rem;
   border-bottom: none;

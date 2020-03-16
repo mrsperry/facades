@@ -34,14 +34,14 @@ nav {
         @include mixins.flex(column, flex-start, stretch);
         position: absolute;
         display: none;
-        color: variables.$dark-text-color;
         background-color: variables.$main-bg-color;
-        box-shadow: 0.1rem 0.1rem 1rem variables.$dark-text-color;
+        box-shadow: 0rem 0rem 1rem variables.$shadow-color;
         min-width: max-content;
         right: 0rem;
 
         a {
             @include mixins.transition(background-color);
+            color: variables.$dark-text-color;
             font-size: 1rem;
             padding: 1rem;
             border-bottom: none;
