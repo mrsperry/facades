@@ -314,6 +314,9 @@ figure img.image-medium {
 figure figcaption.caption-left {
   padding-right: 1rem;
 }
+figure figcaption.caption-right {
+  padding-left: 1rem;
+}
 
 h1 {
   text-align: center;

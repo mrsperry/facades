@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CyntraSafe - Joshua Sperry</title>
+        <!-- Meta -->
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="CyntraSafe's industry leading features">
+        <meta name="keywords" content="Joshua Sperry, portfolio, personal projects, CyntraSafe, cyber security, features">
+        <link rel="icon" href="images/icon.png">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="../../src/libraries/fontawesome-free-5.12.0-web/css/all.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-130264842-4');
+        </script>
+    </head>
+    <body class="dark-bg">
+        <nav>
+            <h1>
+                <img alt="Logo" src="images/icon-2.png">CyntraSafe
+            </h1>
+            <ul id="nav-links">
+                <li><a href="./">Home</a></li>
+                <li><a href="features">Features</a></li>
+                <li><a class="link-active">Pricing</a></li>
+                <li><a href="account">Sign In</a></li>
+                <li><button onclick="window.location += './account.html'">Create an Account</button></li>
+            </ul>
+            <div id="nav-hamburger">
+                <i class="fas fa-bars"></i>
+                <input type="checkbox">
+                <div id="nav-hamburger-links">
+                    <a href="./">Home</a>
+                    <a href="features">Features</a>
+                    <a href="account">Sign In / Sign Up</a>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <article class="large-width">
+                <figure>
+                    <img class="image-medium" src="images/tabs.svg">
+                    <figcaption class="caption-right">
+                        <h1>Integrations</h1>
+                        <p>We offer multiple hooks for integrating with communication programs such as Slack, Skype and more. We also offer email and text services so your team can get notified whenever they need to be.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <figcaption class="caption-left">
+                        <h1>Customization</h1>
+                        <p>Every single on of our alerts are assigned priority. This means you can configure and customize what team sees specific alerts as well as the severity of the alert.</p>
+                        <p>We understand that our package model might not have what you need and we're happy to help your project or business create the best package for you with feature customizations.</p>
+                    </figcaption>
+                    <img class="image-medium" src="images/alert.svg">
+                </figure>
+                <figure>
+                    <img class="image-medium" src="images/privacy.svg">
+                    <figcaption class="caption-right">
+                        <h1>Privacy</h1>
+                        <p>At CyntraSafe we're dedicated to not only your company's privacy but the employee's as well. We have been consistently rated in the top 10 most privacy focused cyber security companies for 15 years in a row.</p>
+                        <p>We offer full analytic reports on the data we collect and the data we share. You can feel free to opt out of all our telemetry programs at any time, free of charge.</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+        <footer>
+            <a>Terms</a>
+            <i class="fas fa-circle"></i>
+            <a>Privacy</a>
+            <i class="fas fa-circle"></i>
+            <a>Legal</a>
+            <i class="fas fa-circle"></i>
+            <a>Contact</a>
+        </footer>
+    </body>
+</html>
