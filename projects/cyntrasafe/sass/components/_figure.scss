@@ -26,6 +26,11 @@ figure {
             max-width: 15rem;
             max-height: 15rem;
         }
+
+        &.image-medium {
+            max-width: 30rem;
+            max-height: 30rem;
+        }
     }
 
     figcaption {

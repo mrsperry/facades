@@ -25,11 +25,29 @@ section {
         align-items: stretch;
     }
 
+    &.section-align-top {
+        align-items: flex-start;
+    }
+
     article {
         @include mixins.flex(column);
 
         &.article-row {
             flex-direction: row;
         }
+
+        &.article-card {
+            flex-grow: 1;
+            box-shadow: 0rem 0rem 3rem variables.$shadow-color;
+            max-width: 25rem;
+            padding: 2rem;
+            margin: 0rem 2rem 5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    section article.article-card {
+        margin: 0rem 0.5rem 3rem;
     }
 }

@@ -13,6 +13,10 @@
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
+.dark-bg {
+    background-color: variables.$dark-bg-color;
+}
+
 .large-width {
     max-width: variables.$large-width;
     margin: auto;

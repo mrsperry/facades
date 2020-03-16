@@ -1,0 +1,30 @@
+@use "../utilities/variables";
+
+ul {
+    list-style-type: none;;
+
+    &.list-features {
+        align-self: stretch;
+        padding: 0rem;
+
+        li {
+            padding: 1rem;
+
+            + li {
+                border-top: 1px solid variables.$shadow-color;
+            }
+
+            i {
+                padding-right: 0.5rem;
+
+                &.fa-check {
+                    color: variables.$success-color;
+                }
+
+                &.fa-times {
+                    color: variables.$failure-color;
+                }
+            }
+        }
+    }
+}
