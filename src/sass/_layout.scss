@@ -1,121 +1,228 @@
-@use "base";
-
-/* Media queries */
-/* 640px */
-@media only screen and (max-width: 40em) {
-    #nav-navbar > a + a {
-        margin-left: 1rem;
-    }
-
-    .description, .description:nth-child(odd) {
-        flex-direction: column-reverse;
-        margin: 3rem 0rem;
-    }
-
-    .description-content {
-        margin: 0rem;
-
-        p {
-            display: none;
-        }
-    }
-
-    img {
-        border-radius: 1em;
-    }
-}
-
-/* Animations */
-@keyframes slide-left {
-    0% { transform: translateX(20%); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes slide-right {
-    0% { transform: translateX(-20%); }
-    100% { transform: translateX(0); }
-}
+@use "global";
+@use "variables";
 
 /* Fonts */
 @font-face {
     font-family: "Klein";
-    src: url("../fonts/klein-regular.ttf")
+    src: url("../assets/fonts/klein-regular.ttf")
 }
 
 :root {
     font-family: "Klein";
     font-size: 16px;
-    color: #DDDDDD;
+    color: variables.$text-color;
 }
 
 /* Containers */
-body, #nav:before {
-    background-color: base.$bg-color;
-    background-image: radial-gradient(circle at center, base.$bg-color, hsl(219, 40%, 8%));
+body {
+    @include global.flex(column);
+    background-color: variables.$bg-color;
+    box-sizing: border-box;
+    margin: 0rem;
 }
 
-#content, #nav-navbar {
-    max-width: 75rem;
+nav ul, main {
+    max-width: 1024px;
 }
 
-#content {
-    padding: 2rem;
-    margin: 2rem auto;
-}
-
-/* Navbar */
-#nav {
-    position: relative;
-    background-color: base.$bg-color;
-    box-shadow: 0.1rem 0rem 1rem hsla(219, 40%, 10%, 0.5);
-    padding: 1rem 0rem;
-
-    &::before {
-        content: "";
-        position: absolute;
-        filter: blur(5rem);
-        top: 0rem;
-        left: 0rem;
-        bottom: 0rem;
-        right: 0rem;
-    }
-}
-
-#nav-navbar {
-    z-index: 1;
-    justify-content: flex-end;
+nav {
+    @include global.flex();
     width: 100%;
-    padding: 0rem 2rem;
-    margin: auto;
+    margin-bottom: 3rem;
 
-    a + a {
-        margin-left: 2rem;
+    ul {
+        @include global.flex(row, flex-end);
+        width: 100%;
+        padding: 0rem 1rem;
+        margin: 1.5rem 1rem;
+
+        li {
+            + li {
+                margin-left: 2rem;
+            }
+
+            a {
+                position: relative;
+                transition: color 250ms ease-in-out,
+                            border-bottom 250ms ease-in-out;
+                color: variables.$text-color;
+                font-size: 1.15rem;
+                padding: 0rem 0.5rem;
+                border-bottom: 1px solid transparent;
+            
+                &:hover, &:active, &.active {
+                    &::after {
+                        width: 100%;
+                        left: 0%;
+                    }
+                }
+            
+                &::after {
+                    position: absolute;
+                    content: "";
+                    transition: width 250ms ease-in-out,
+                                left 250ms ease-in-out;
+                    background-color: variables.$text-color;
+                    width: 0px;
+                    height: 1px;
+                    left: 50%;
+                    bottom: 0px;
+                }
+            }
+        }
     }
 }
 
-.nav-active {
-    color: base.$highlight-color;
+section {
+    @include global.flex();
+    flex-wrap: wrap;
+    width: 100%;
+
+    a {
+        color: variables.$bg-color;
+        box-shadow: 0rem 0rem 2rem variables.$accent-color;
+        border-radius: 1rem;
+        margin: 1rem;
+    }
 }
+/* Elements */
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin: 0rem;
 
-/* Content */
-#personal-projects-header {
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid base.$break-color;
-}
+    &:hover, &:active {
+        figcaption {
+            transform: translateY(0%);
+        }
+    }
 
-.description {
-    animation: fade-in 1000ms ease-out, slide-right 750ms ease-out;
+    figcaption {
+        position: absolute;
+        color: variables.$bg-color;
+        font-weight: bold;
+        transition: transform 250ms ease-in-out;
+        background-color: rgba(0, 0, 0, 0.85);
+        transform: translateY(100%);
+        bottom: 0rem;
+        left: 0rem;
+        right: 0rem;
+        padding: 1.5rem;
 
-    &:nth-child(odd) {
-        animation: fade-in 1000ms ease-out, slide-left 750ms ease-out;
-        flex-direction: row-reverse;
+        span {
+            display: block;
+            font-weight: normal;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    img {
+        display: block;
+        height: 300px;
     }
 }
 
-.description-content {
-    margin: 1rem;
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-left: 1rem;
+    border-bottom: 1px solid variables.$accent-color;
+    margin: 0.5rem 0rem;
+}
 
-    p:last-child {
-        margin-top: 1rem;
+@media only screen and (min-width: 2560px) {
+    :root {
+        font-size: 30px;
+    }
+    
+    nav ul, main {
+        max-width: 1500px;
+    }
+
+    figure img {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    :root {
+        font-size: 14px;
+    }
+
+    nav ul, main {
+        max-width: 900px;
+    }
+
+    figure img {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 928px) {
+    :root {
+        font-size: 12px;
+    }
+
+    nav ul, main {
+        max-width: 650px;
+    }
+
+    section a {
+        box-shadow: none;
+    }
+
+    figure {
+        overflow: visible;
+        border-radius: 0rem;
+
+        figcaption {
+            position: static;
+            color: variables.$text-color;
+            font-size: 1.2rem;
+            text-align: center;
+            transform: none;
+            background-color: transparent;
+            padding: 0rem 0rem 0.5rem;
+
+            span {
+                display: none;
+            }
+        }
+
+        img {
+            box-shadow: 0rem 0rem 1rem #CCCCCC;
+            border-radius: 1rem;
+            height: 180px;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    :root {
+        font-size: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul, main {
+        max-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    :root {
+        font-size: 8px;
+    }
+
+    nav ul, main {
+        max-width: 250px;
+    }
+
+    figure img {
+        height: 150px;
     }
 }
