@@ -1,0 +1,101 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+body {
+    background-color: variables.$main-color;
+
+    .nav-container, article {
+        width: 1350px;
+        margin: auto;
+    }
+
+    section {
+        &.content-accent {
+            @include mixins.psuedo();
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: variables.$accent-color;
+
+            &::before, &::after {
+                /* (width - border widths) - (content width + padding + border) */
+                width: calc(((100% - 4rem) - (1350px + 33px)) / 2);
+                height: 0px;
+            }
+
+            &::before {
+                top: -2rem;
+                left: 0px;
+                border-top: 1rem solid transparent;
+                border-right: 1rem solid transparent;
+                border-bottom: 1rem solid variables.$accent-color;
+                border-left: 1rem solid variables.$accent-color;
+            }
+
+            &::after {
+                bottom: -2rem;
+                right: 0px;
+                border-top: 1rem solid variables.$accent-color;
+                border-right: 1rem solid variables.$accent-color;
+                border-bottom: 1rem solid transparent;
+                border-left: 1rem solid transparent;
+            }
+
+            article {
+                border-left: 1px solid variables.$main-color;
+            }
+        }
+
+        article {
+            padding: 8rem 0rem;
+            border-left: 1px solid variables.$faded-color;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        .nav-container, article {
+            width: 300px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        .nav-container, article {
+            width: 600px;
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    body {
+        .nav-container, article {
+            width: 800px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        .nav-container, article {
+            width: 850px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        .nav-container, article {
+            width: 1100px;
+        }
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    body {
+        .nav-container, article {
+            width: 1500px;
+        }
+    }
+}

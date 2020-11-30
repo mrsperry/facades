@@ -1,0 +1,55 @@
+@use "../utils/animations";
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.hero {
+    @include mixins.animation(shadow-dropdown,
+        variables.$anim-slowest-timing,
+        variables.$anim-slower-timing);
+    animation-fill-mode: forwards;
+    position: relative;
+    color: variables.$invert-color;
+    background-color: variables.$main-color;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10rem 0rem 15rem;
+
+    &::before {
+        @include mixins.animation(pinch, variables.$anim-slower-timing);
+        position: absolute;
+        content: "";
+        background-color: variables.$main-color;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+    > img {
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        bottom: 0px;
+    }
+
+    h1 {
+        @include mixins.animation(fade-up,
+            variables.$anim-slower-timing,
+            variables.$anim-slower-timing);
+        color: variables.$accent-color;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        @include mixins.animation(fade-up,
+            variables.$anim-slower-timing,
+            variables.$anim-slowest-timing);
+        font-size: 1.15rem;
+        color: variables.$invert-color;
+    }
+
+    h1, h2 {
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+}

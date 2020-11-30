@@ -1,0 +1,32 @@
+@use "variables";
+
+/* Slides an element down from the top */
+@keyframes slide-down {
+    0%   { transform: translateY(-100%); }
+    100% { transform: translateY(0%);    }
+}
+
+/* Expands an element from the left and right equally */
+@keyframes pinch {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+        left: 50%;
+    }
+}
+
+/* Moves an element up and fades in */
+@keyframes fade-up {
+    0% { transform: translateY(100%); }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes shadow-dropdown {
+    0% { box-shadow: 0rem 0rem 0rem transparent; }
+    100% { box-shadow: 0rem 0rem 7.5rem variables.$accent-color; }
+}

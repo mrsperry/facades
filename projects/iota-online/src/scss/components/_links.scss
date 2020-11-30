@@ -1,0 +1,149 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+a {
+    @include mixins.transition(color);
+    @include mixins.psuedo();
+    cursor: pointer;
+    color: variables.$accent-color;
+
+    &::after {
+        @include mixins.transition(left, width);
+        border-bottom: 1px solid variables.$accent-color;
+        bottom: 0px;
+        left: 50%;
+        width: 0%;
+    }
+
+    &:hover, &:active {
+        color: variables.$accent-color;
+
+        &::after {
+            left: 0%;
+            width: 100%;
+        }
+    }
+
+    &.runway {
+        color: variables.$invert-color;
+        padding: 0.75rem;
+
+        &:hover, &:active {
+            color: variables.$accent-color;
+
+            &::before, &::after {
+                width: 100%;
+            }
+        }
+
+        &::before, &::after {
+            @include mixins.transition(width);
+            background-color: variables.$accent-color;
+            width: 0px;
+            height: 1px;
+        }
+
+        &::before {
+            top: 0px;
+            left: 0px;
+        }
+
+        &::after {
+            border: none;
+            bottom: 0px;
+            right: 0px;
+            left: initial;
+        }
+    }
+
+    &.button-style {
+        @include mixins.flex();
+        @include mixins.transition(background-color);
+        position: relative;
+        background-color: variables.$accent-color;
+        padding: 0.85rem 1.75rem;
+
+        &:hover, &:active {
+            &::after {
+                transition: none;
+                border-bottom: none;
+                left: auto;
+                width: auto;
+            }
+
+            .overlay::before {
+                left: -12.5%;
+            }
+
+            span {
+                color: variables.$accent-color;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            overflow: hidden;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+                @include mixins.transition(left);
+                position: absolute;
+                content: "";
+                transform: skewX(-10deg);
+                left: -125%;
+                width: 120%;
+                height: 100%;
+                background-color: variables.$faded-color;
+            }
+        }
+
+        span {
+            @include mixins.transition(color);
+            font-weight: bold;
+            color: variables.$invert-color;
+            z-index: 1;
+        }
+    }
+
+    &.bordered {
+        &:hover, &:active {
+            &::before, &::after {
+                background-color: transparent;
+                width: calc(100% + 2rem);
+                height: 50%;
+            }
+
+            &::before {
+                top: -1rem;
+            }
+
+            &::after {
+                bottom: -1rem;
+                border-bottom: 1px solid variables.$faded-color;
+            }
+        }
+
+        &::before, &::after {
+            transition: none;
+            background-color: transparent;
+            border-left: 1px solid variables.$faded-color;
+            border-right: 1px solid variables.$faded-color;
+            width: calc(100% + 2rem);
+            height: 50%;
+            left: -1rem;
+        }
+
+        &::before {
+            border-top: 1px solid variables.$faded-color;
+            top: -1rem;
+        }
+
+        &::after {
+            border-bottom: 1px solid variables.$faded-color;
+            bottom: -1rem;
+        }
+    }
+}

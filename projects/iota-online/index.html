@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Iota Online</title>
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="The main page of Iota Online - a futuristic FPS MMO available for free">
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="src/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <!-- jQuery -->
+        <script src="../../src/libraries/jquery-3.4.1.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="src/output/main.css">
+        <!-- JS -->
+        <script src="src/output/build.js"></script>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
+        <script>
+            if (document.location.hostname.search("mrsperry.github.io") !== -1) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag("js", new Date());
+
+                gtag("config", "UA-130264842-4");
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-container">
+                <img alt="Iota Online logo" src="src/assets/images/logo.png">
+                <ul>
+                    <li>
+                        <a class="runway" href="/about">About</a>
+                    </li>
+                    <li>
+                        <a class="runway" href="/news">News</a>
+                    </li>
+                    <li class="align-right">
+                        <a class="runway" href="/account">Create an account</a>
+                    </li>
+                    <li>
+                        <a class="button-style" href="/play">
+                            <div class="overlay"></div>
+                            <span>Play now</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="index">
+            <section class="hero">
+                <img alt="Glowing red lights resembling spotlights in the sky" src="src/assets/images/hero.svg">
+                <h1 class="centered bold">Discover the Truth</h1>
+                <h2 class="centered">Reveal the non-believers. Destroy all opposition. Trust in Iota.</h2>
+            </section>
+            <section class="container">
+                <article>
+                    <h1 class="decorated">Iota Watches You</h1>
+                    <h2>Command Allegiance</h2>
+                    <img alt="An assorted array of red circles in the shape of radio visualizers" src="src/assets/images/circles.svg">
+                    <p>With six opposing factions to choose from you can match your surroundings to your personal play style. Play with your friends or join an existing clan to raid with other people.</p>
+                    <p>Lead cults, create war bands, cleanse dissidents or rebuild civilization in your own image.</p>
+                    <p>
+                        <a>Learn more about how you are in control.</a>
+                    </p>
+                </article>
+            </section>
+            <section class="container content-accent">
+                <article>
+                    <h1 class="inverted">Join millions of players in discovering the secrets of Iota</h1>
+                    <a class="bordered button-style" href="/play">
+                        <div class="overlay"></div>
+                        <span>Play now for free</span>
+                    </a>
+                    <div class="ratings">
+                        <span>"Superb storytelling" - GameSpot</span>
+                        <span>"Absolutely breathtaking immersion" - IGN</span>
+                        <span>"An out of body experience" - Game Informer</span>
+                    </div>
+                </article>
+            </section>
+            <section class="container">
+                <article>
+                    <h1 class="decorated">Keep Up With Iota</h1>
+                    <h2>View the latest changes</h2>
+                    <img class="bottom" alt="A glowing red circuit" src="src/assets/images/circuit.svg">
+                    <p>Iota Online has been in constant development for over five years and we're excited to share our history with you!</p>
+                    <p>From change notes to dev blogs we believe in transparency as we experience our journey to discover the secrets of Iota together.</p>
+                    <p>
+                        <a>Click here to view the latest news.</a>
+                    </p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

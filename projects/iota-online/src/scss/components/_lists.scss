@@ -1,0 +1,5 @@
+@use "../utils/mixins";
+
+ul {
+    @include mixins.flex(column, flex-start, flex-start);
+}

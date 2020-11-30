@@ -1,0 +1,42 @@
+@use "sass:string";
+
+@use "animations";
+@use "variables";
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin psuedo() {
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+    }
+}
+
+@mixin animation($id, $timing: variables.$anim-timing, $delay: 0ms) {
+    animation: $id $timing variables.$anim-easing $delay;
+}
+
+@mixin transition($properties...) {
+    transition: all variables.$anim-timing variables.$anim-easing;
+    /* Overrides the `all` by only transitioning these properties */
+    transition-property: getPropertyNames($properties);
+}
+
+/* Returns a list of transition property names */
+@function getPropertyNames($properties...) {
+    $props: "";
+
+    @each $prop in $properties {
+        $props: $props + " " + $prop;
+    }
+
+    /* Remove the quotes and the leading space */
+    @return string.unquote(string.slice($props, 2, string.length($props)));
+}

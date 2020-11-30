@@ -1,0 +1,37 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+nav {
+    @include mixins.animation(slide-down, variables.$anim-slow-timing);
+    @include mixins.transition(box-shadow);
+    position: fixed;
+    color: variables.$invert-color;
+    background-color: variables.$main-color;
+    box-shadow: 0rem 0rem 0rem transparent;
+    z-index: 3;
+    top: 0px;
+    width: 100%;
+    padding: 1rem 0rem;
+
+    &.scrolling {
+        box-shadow: 0rem 0rem 3rem variables.$accent-color;
+    }
+
+    .nav-container {
+        @include mixins.flex(row, flex-start);
+
+        ul {
+            flex-direction: row;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        li {
+            margin-left: 1rem;
+
+            &.align-right {
+                margin-left: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+h1, h2 {
+    &.bold {
+        font-weight: bold;
+    }
+
+    &.centered {
+        text-align: center;
+    }
+
+    &.inverted {
+        color: variables.$main-color;
+    }
+}
+
+h1.decorated {
+    padding-top: 5rem;
+    border-top: 1px solid variables.$faded-color;
+
+    &.inverted {
+        border-top: 1px solid variables.$main-color;
+
+        &::before {
+            background-color: variables.$main-color;
+        }
+    }
+}
+
+h2 {
+    color: variables.$accent-color;
+}
