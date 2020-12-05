@@ -11,13 +11,7 @@
     color: variables.$invert-color;
 }
 
-@media only screen and (max-width: 768px) {
-    :root {
-        font-size: 8px;
-    }
-}
-
-@media only screen and (min-width: 920px) {
+@media only screen and (max-width: 920px) {
     :root {
         font-size: 10px;
     }

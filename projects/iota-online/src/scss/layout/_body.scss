@@ -4,7 +4,7 @@
 body {
     background-color: variables.$main-color;
 
-    .nav-container, article {
+    .nav-container, .card-container, article {
         width: 1350px;
         margin: auto;
     }
@@ -54,7 +54,7 @@ body {
 
 @media only screen and (max-width: 425px) {
     body {
-        .nav-container, article {
+        .nav-container, .card-container, article {
             width: 300px;
         }
     }
@@ -62,7 +62,7 @@ body {
 
 @media only screen and (min-width: 768px) {
     body {
-        .nav-container, article {
+        .nav-container, .card-container, article {
             width: 600px;
         }
     }
@@ -70,7 +70,7 @@ body {
 
 @media only screen and (min-width: 920px) {
     body {
-        .nav-container, article {
+        .nav-container, .card-container, article {
             width: 800px;
         }
     }
@@ -78,7 +78,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
     body {
-        .nav-container, article {
+        .nav-container, .card-container, article {
             width: 850px;
         }
     }
@@ -86,7 +86,7 @@ body {
 
 @media only screen and (min-width: 1440px) {
     body {
-        .nav-container, article {
+        .nav-container, .card-container, article {
             width: 1100px;
         }
     }
@@ -94,7 +94,7 @@ body {
 
 @media only screen and (min-width: 2560px) {
     body {
-        .nav-container, article {
+        .nav-container, .card-container, article {
             width: 1500px;
         }
     }

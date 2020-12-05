@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About - Iota Online</title>
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="">
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="src/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <!-- jQuery -->
+        <script src="../../src/libraries/jquery-3.4.1.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="src/output/main.css">
+        <!-- JS -->
+        <script src="src/output/build.js"></script>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-4"></script>
+        <script>
+            if (document.location.hostname.search("mrsperry.github.io") !== -1) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag("js", new Date());
+
+                gtag("config", "UA-130264842-4");
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-container">
+                <img alt="Iota Online logo" src="src/assets/images/logo.png">
+                <ul>
+                    <li>
+                        <a class="runway" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="runway" href="/about">About</a>
+                    </li>
+                    <li>
+                        <a class="runway" href="/news">News</a>
+                    </li>
+                    <li class="align-right">
+                        <a class="runway" href="/account">Create an account</a>
+                    </li>
+                    <li>
+                        <a class="button-style" href="/play">
+                            <div class="overlay"></div>
+                            <span>Play now</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="about">
+            <section class="hero">
+                <h1 class="centered bold">Seek knowledge from Iota</h1>
+                <h2 class="centered">From any facet or school, the Iota grants knowledge to those who seek it.</h2>
+            </section>
+            <a class="bordered button-style" href="/play">
+                <div class="overlay"></div>
+                <span>Play now for free</span>
+            </a>
+            <section class="card-container">
+                <article>
+                    <h1>Factions</h1>
+                    <p>With six major factions and over thirty minor factions vying for the favor - or destruction - of Iota you can tailor your allies to your play style.</p>
+                    <p>If you decide you don't like who you're working with you can freely swap to any other willing faction instantly!</p>
+                    <a>Learn more about the factions.</a>
+                </article>
+                <article>
+                    <h1>Gameplay</h1>
+                    <p>Experience stunning visuals with native RTX and digital vibrance support at a constant sixty frames per second.</p>
+                    <p>Customization of abilities and followers allows for a personalized experience.</p>
+                    <a>Learn more about your abilities.</a>
+                </article>
+                <article>
+                    <h1>Cooperation</h1>
+                    <p>Play with your friends in up to four player online and local co-op. You can also use our trained match maker to find players of an equal skill level to play with.</p>
+                    <p>You will never be punished for playing alone - we value your single player experience.</p>
+                    <a>Learn more about parties.</a>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

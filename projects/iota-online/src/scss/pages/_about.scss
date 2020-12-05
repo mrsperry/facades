@@ -1,0 +1,134 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.about {
+    .hero {
+        animation: none;
+        background-color: transparent;
+        padding-bottom: 10rem;
+
+        &::before {
+            animation: none;
+        }
+
+        h1 {
+            animation-delay: 0ms;
+        }
+
+        h2 {
+            animation-delay: 1s;
+        }
+    }
+
+    > a {
+        max-width: 25%;
+        margin: auto;
+    }
+
+    .card-container {
+        @include mixins.flex(row, space-between, stretch);
+        margin: 5rem auto;
+
+        > * {
+            @include mixins.psuedo();
+            @include mixins.transition(border-color);
+            @include mixins.flex(column);
+            text-align: center;
+            max-width: 25%;
+            padding: 2rem;
+            border: 1px solid variables.$faded-color;
+            margin: 0rem;
+
+            &:hover, &:active {
+                border-color: variables.$accent-color;
+
+                &::before, &::after {
+                    background-color: variables.$accent-color;
+                }
+            }
+
+            &::before, &::after {
+                @include mixins.transition(background-color);
+                width: 0.5rem;
+                height: 0.5rem;
+                background-color: variables.$faded-color;
+            }
+
+            &::before {
+                bottom: -0.25rem;
+                left: -0.25rem;
+            }
+
+            &::after {
+                top: -0.25rem;
+                right: -0.25rem;
+            }
+
+            h1 {
+                @include mixins.psuedo();
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: variables.$accent-color;
+
+                &::before, &::after {
+                    bottom: -1rem;
+                    left: calc(50% - 1rem);
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: variables.$faded-color;
+                }
+
+                &::after {
+                    left: calc(50% + 0.5rem);
+                }
+            }
+
+            p {
+                line-height: 1.5rem;
+                padding: 2.5rem 0rem 1.5rem;
+                margin: auto;
+
+                + p {
+                    padding-top: 1rem;
+                }
+            }
+
+            a {
+                margin-top: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .about {
+        .hero {
+            padding-bottom: 5rem;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+                padding: 0rem 1rem;
+            }
+        }
+
+        > a {
+            max-width: 50%;
+        }
+
+        .card-container {
+            @include mixins.flex(column);
+
+            > * {
+                max-width: calc(100% - 4rem);
+                
+                + * {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
